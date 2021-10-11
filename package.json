@@ -2,6 +2,8 @@
   "name": "cb-portfolio",
   "version": "0.1.0",
   "private": true,
+  "description": "Christopher Bussick's portfolio website",
+  "author": "Christopher Bussick <bussick.christopher@gmail.com>",
   "dependencies": {
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
@@ -33,5 +35,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "material-ui",
+    "cra",
+    "eslint",
+    "prettier"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChristopherBussick/cb-portfolio"
+  },
+  "bugs": {
+    "url": "https://github.com/ChristopherBussick/cb-portfolio/issues"
   }
 }
