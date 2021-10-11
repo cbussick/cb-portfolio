@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "./.."
+    }
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#FFC107",
+      "activityBar.foreground": "#000000"
+    },
+    "codeTemplateTool.templatesPath": "{workspace}/.vscode/templates"
+  }
+}
