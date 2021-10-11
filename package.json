@@ -24,6 +24,8 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.26.1",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.3",
     "prettier": "2.4.1"
   },
   "scripts": {
@@ -58,5 +60,13 @@
   },
   "bugs": {
     "url": "https://github.com/ChristopherBussick/cb-portfolio/issues"
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix --max-warnings=0"
+    ]
   }
 }
