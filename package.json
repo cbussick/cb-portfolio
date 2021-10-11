@@ -32,7 +32,11 @@
     "dev": "npm run start",
     "develop": "npm run start",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "test": "echo 'no tests yet'",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0",
+    "typecheck": "tsc",
+    "full-check": "npm run typecheck && npm run lint && npm run test"
   },
   "browserslist": {
     "production": [
