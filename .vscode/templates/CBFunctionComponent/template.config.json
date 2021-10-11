@@ -1,0 +1,12 @@
+{
+  "name": "CB Function Component",
+  "variables": [
+    {
+      "name": "componentName",
+      "style": {
+        "case": "pascalCase",
+        "keepUpperCase": "true"
+      }
+    }
+  ]
+}
