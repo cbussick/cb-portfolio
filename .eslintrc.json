@@ -14,5 +14,8 @@
     "project": "./tsconfig.json"
   },
   "plugins": ["react", "@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "react/destructuring-assignment": "off",
+    "import/prefer-default-export": "off"
+  }
 }

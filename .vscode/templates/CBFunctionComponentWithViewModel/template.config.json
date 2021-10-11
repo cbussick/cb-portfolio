@@ -1,0 +1,12 @@
+{
+  "name": "CB Function Component With ViewModel",
+  "variables": [
+    {
+      "name": "componentName",
+      "style": {
+        "case": "pascalCase",
+        "keepUpperCase": "true"
+      }
+    }
+  ]
+}

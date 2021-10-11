@@ -5,6 +5,10 @@
   "description": "Christopher Bussick's portfolio website",
   "author": "Christopher Bussick <bussick.christopher@gmail.com>",
   "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.0.3",
+    "@mui/system": "^5.0.3",
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
