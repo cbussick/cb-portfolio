@@ -2,6 +2,8 @@
   "name": "cb-portfolio",
   "version": "0.1.0",
   "private": true,
+  "description": "Christopher Bussick's portfolio website",
+  "author": "Christopher Bussick <bussick.christopher@gmail.com>",
   "dependencies": {
     "@types/node": "^12.0.0",
     "@types/react": "^17.0.0",
@@ -11,16 +13,30 @@
     "react-scripts": "4.0.3",
     "typescript": "^4.1.2"
   },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^14.0.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.26.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.3",
+    "prettier": "2.4.1"
+  },
   "scripts": {
     "dev": "npm run start",
     "develop": "npm run start",
     "start": "react-scripts start",
-    "build": "react-scripts build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
+    "build": "react-scripts build",
+    "test": "echo 'no tests yet'",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0",
+    "typecheck": "tsc",
+    "full-check": "npm run typecheck && npm run lint && npm run test"
   },
   "browserslist": {
     "production": [
@@ -32,6 +48,29 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "material-ui",
+    "cra",
+    "eslint",
+    "prettier"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChristopherBussick/cb-portfolio"
+  },
+  "bugs": {
+    "url": "https://github.com/ChristopherBussick/cb-portfolio/issues"
+  },
+  "lint-staged": {
+    "**/*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js,ts,jsx,tsx}": [
+      "eslint --fix --max-warnings=0"
     ]
   }
 }
