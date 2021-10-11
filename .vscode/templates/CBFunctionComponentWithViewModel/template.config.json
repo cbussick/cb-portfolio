@@ -1,5 +1,5 @@
 {
-  "name": "CB Function Component without ViewModel",
+  "name": "CB Function Component With ViewModel",
   "variables": [
     {
       "name": "componentName",
