@@ -5,11 +5,11 @@ export const StyledHeader = styled(AppBar)(({ theme }) => ({
 }));
 
 export const StyledHeaderLink = styled(Link)(({ theme }) => ({
-  color: theme.palette.grey[500],
+  color: theme.palette.text.primary,
   padding: theme.spacing(2),
   textDecoration: "none",
   transition: "color 0.3s",
   "&:hover": {
-    color: theme.palette.text.primary,
+    color: theme.palette.common.black,
   },
 }));
