@@ -16,11 +16,7 @@ const App = (): JSX.Element => (
       }}
     >
       <CBHeader />
-      <Typography
-        variant="h1"
-        component="div"
-        sx={{ flexGrow: 1, textAlign: "center" }}
-      >
+      <Typography variant="h1" component="div" sx={{ textAlign: "center" }}>
         👷🚧
         <br />
         Work in progress! :)
