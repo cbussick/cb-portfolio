@@ -25,7 +25,7 @@ const CBHeader = (): JSX.Element => {
           component="div"
           sx={{ flexGrow: 1, fontWeight: 600 }}
         >
-          Christopher Bussick
+          👋 Christopher Bussick
         </Typography>
         <Box>{headerElements}</Box>
       </Toolbar>
