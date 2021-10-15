@@ -1,12 +1,15 @@
-import { styled, Typography } from "@mui/material";
-import { StyledHeaderProps } from "./CBHeaderInterfaces";
+import { AppBar, Link, styled } from "@mui/material";
 
-const shouldForwardProp = (prop: keyof StyledHeaderProps) =>
-  prop !== "testColor";
+export const StyledHeader = styled(AppBar)(({ theme }) => ({
+  backgroundColor: theme.palette.background.default,
+}));
 
-export const StyledHeader = styled(Typography, {
-  shouldForwardProp,
-})<StyledHeaderProps>(({ theme, ...props }) => ({
-  backgroundColor: theme.palette.secondary.main,
-  color: props.testColor,
+export const StyledHeaderLink = styled(Link)(({ theme }) => ({
+  color: theme.palette.grey[500],
+  padding: theme.spacing(2),
+  textDecoration: "none",
+  transition: "color 0.3s",
+  "&:hover": {
+    color: theme.palette.text.primary,
+  },
 }));
