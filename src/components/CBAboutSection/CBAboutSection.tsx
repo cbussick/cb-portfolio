@@ -1,16 +1,16 @@
 import { Typography } from "@mui/material";
 import React from "react";
+import { Section } from "../../interfaces/Section";
 import CBSectionContainer from "../CBSectionContainer/CBSectionContainer";
-import { Section } from "../interfaces/Section";
 
-const CBHomeSection = (): JSX.Element => (
-  <CBSectionContainer section={Section.Home}>
+const CBAboutSection = (): JSX.Element => (
+  <CBSectionContainer section={Section.About}>
     <Typography variant="h1" component="div" sx={{ textAlign: "center" }}>
-      👷🚧
+      ℹ️
       <br />
-      Work in progress! :)
+      Stuff about me
     </Typography>
   </CBSectionContainer>
 );
 
-export default CBHomeSection;
+export default CBAboutSection;

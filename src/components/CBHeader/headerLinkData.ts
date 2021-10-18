@@ -1,5 +1,5 @@
-import { HeaderLink } from "../interfaces/HeaderLink";
-import { Section } from "../interfaces/Section";
+import { HeaderLink } from "../../interfaces/HeaderLink";
+import { Section } from "../../interfaces/Section";
 
 export const headerLinks: HeaderLink[] = [
   { id: "", label: "Home", section: Section.Home },
