@@ -5,11 +5,14 @@ export const StyledHeader = styled(AppBar)(({ theme }) => ({
 }));
 
 export const StyledHeaderLink = styled(Link)(({ theme }) => ({
-  color: theme.palette.text.primary,
   padding: theme.spacing(2),
   textDecoration: "none",
-  transition: "color 0.3s",
+  transition: "0.2s",
+  background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.primary.dark} 90%)`,
+  backgroundClip: "text",
+  // This notation with alpha/opacity at the end is necessary to have a proper transition with a gradient on hover
+  color: `${theme.palette.text.primary}FF`,
   "&:hover": {
-    color: theme.palette.common.black,
+    color: `${theme.palette.text.primary}00`,
   },
 }));
