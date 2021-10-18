@@ -1,5 +1,6 @@
-import { Box, Toolbar, Typography } from "@mui/material";
+import { Box, Toolbar } from "@mui/material";
 import React from "react";
+import CBLogo from "../CBLogo/CBLogo";
 import { StyledHeader, StyledHeaderLink } from "./CBHeaderStyles";
 import { headerLinks } from "./headerLinkData";
 
@@ -13,13 +14,7 @@ const CBHeader = (): JSX.Element => {
   return (
     <StyledHeader>
       <Toolbar component="nav">
-        <Typography
-          variant="h5"
-          component="div"
-          sx={{ flexGrow: 1, fontWeight: 600 }}
-        >
-          👋 Christopher Bussick
-        </Typography>
+        <CBLogo />
         <Box>{headerElements}</Box>
       </Toolbar>
     </StyledHeader>
