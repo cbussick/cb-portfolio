@@ -29,8 +29,6 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 To learn TypeScript, visit the [TypeScript docs](https://www.typescriptlang.org/).
 
-To learn Redux Toolkit, visit the [Redux Toolkit docs](https://redux-toolkit.js.org/).
-
 To learn about ESLint, visit the [ESLint docs](https://eslint.org/).
 
 To learn about Prettier, visit the [Prettier docs](https://prettier.io/).
