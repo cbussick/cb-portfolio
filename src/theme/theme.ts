@@ -16,7 +16,7 @@ const theme = createTheme({
   typography: {
     fontFamily: ["quicksand", "sans-serif"].join(", "),
     body1: {
-      fontSize: "1.2rem",
+      fontSize: "2rem",
     },
   },
 });
