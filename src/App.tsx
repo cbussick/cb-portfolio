@@ -1,7 +1,11 @@
 import "@fontsource/quicksand";
-import { Box, CssBaseline, ThemeProvider, Typography } from "@mui/material";
+import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
+import CBAboutSection from "./CBAboutSection/CBAboutSection";
+import CBContactSection from "./CBContactSection/CBContactSection";
 import CBHeader from "./CBHeader/CBHeader";
+import CBHomeSection from "./CBHomeSection/CBHomeSection";
+import CBProjectsSection from "./CBProjectsSection/CBProjectsSection";
 import theme from "./theme/theme";
 
 const App = (): JSX.Element => (
@@ -10,17 +14,16 @@ const App = (): JSX.Element => (
     <Box
       sx={{
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh",
       }}
     >
       <CBHeader />
-      <Typography variant="h1" component="div" sx={{ textAlign: "center" }}>
-        👷🚧
-        <br />
-        Work in progress! :)
-      </Typography>
+      <CBHomeSection />
+      <CBAboutSection />
+      <CBProjectsSection />
+      <CBContactSection />
     </Box>
   </ThemeProvider>
 );
