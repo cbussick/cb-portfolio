@@ -5,7 +5,7 @@ import CBSectionContainer from "../CBSectionContainer/CBSectionContainer";
 const CBProjectsSection = (): JSX.Element => (
   <CBSectionContainer>
     <Typography variant="h1" component="div" sx={{ textAlign: "center" }}>
-      💡
+      💡👷
       <br />
       Projects I&apos;ve worked on
     </Typography>
