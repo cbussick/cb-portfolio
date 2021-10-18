@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import React from "react";
-import { Section } from "../../interfaces/Section";
-import CBSectionContainer from "../CBSectionContainer/CBSectionContainer";
+import { Section } from "../../../interfaces/Section";
+import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
 
 const CBContactSection = (): JSX.Element => (
   <CBSectionContainer section={Section.Contact}>
