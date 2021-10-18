@@ -2,7 +2,7 @@ import "@fontsource/quicksand";
 import { Box, CssBaseline, ThemeProvider, Typography } from "@mui/material";
 import React from "react";
 import CBHeader from "./CBHeader/CBHeader";
-import theme from "./theme";
+import theme from "./theme/theme";
 
 const App = (): JSX.Element => (
   <ThemeProvider theme={theme}>
