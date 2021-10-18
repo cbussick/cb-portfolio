@@ -1,14 +1,7 @@
 import { Box, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { StyledHeader, StyledHeaderLink } from "./CBHeaderStyles";
-import { HeaderLink } from "./HeaderLink";
-
-const headerLinks: HeaderLink[] = [
-  { id: "", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "projects", label: "Projects" },
-  { id: "contact-me", label: "Contact me" },
-];
+import { headerLinks } from "./headerLinkData";
 
 const CBHeader = (): JSX.Element => {
   const headerElements: JSX.Element[] = headerLinks.map((link) => (
