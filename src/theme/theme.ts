@@ -4,6 +4,7 @@ const theme = createTheme({
   palette: {
     primary: {
       main: "#FFC107",
+      dark: "#ff7f07",
     },
     secondary: {
       main: "#03A9F4",
@@ -13,7 +14,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["quicksand", "sans-serif"].join(","),
+    fontFamily: ["quicksand", "sans-serif"].join(", "),
     body1: {
       fontSize: "1.2rem",
     },
