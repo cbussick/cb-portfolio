@@ -3,15 +3,18 @@ import { getHeaderLinkForSection } from "../CBHeader/headerLinkData";
 import { CBSectionContainerProps } from "./CBSectionContainerInterfaces";
 import { StyledContainer } from "./CBSectionContainerStyles";
 
-const CBSectionContainer = (props: CBSectionContainerProps): JSX.Element => (
-  <StyledContainer
-    {...props}
-    maxWidth={false}
-    backgroundColor={props.backgroundColor}
-    id={getHeaderLinkForSection(props.section)?.id}
-  >
-    {props.children}
-  </StyledContainer>
-);
+const CBSectionContainer = (props: CBSectionContainerProps): JSX.Element => {
+  const sectionId = getHeaderLinkForSection(props.section)?.id;
+  return (
+    <StyledContainer
+      {...props}
+      maxWidth={false}
+      backgroundColor={props.backgroundColor}
+      id={sectionId || undefined}
+    >
+      {props.children}
+    </StyledContainer>
+  );
+};
 
 export default CBSectionContainer;
