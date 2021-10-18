@@ -10,7 +10,7 @@ const CBTextGradient = (props: CBTextGradientProps): JSX.Element => {
       {...props}
       component="em"
       sx={{
-        background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.primary.dark} 90%)`,
+        background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.primary.dark} 100%)`,
         backgroundClip: "text",
         color: "transparent",
         fontStyle: "normal",
