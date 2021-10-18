@@ -1,7 +1,6 @@
 import { Link, styled } from "@mui/material";
 
-export const StyledLink = styled(Link)(({ theme }) => ({
+export const StyledLogo = styled(Link)(() => ({
   flexGrow: 1,
   textDecoration: "none",
-  color: theme.palette.primary.main,
 }));
