@@ -20,10 +20,20 @@ const App = (): JSX.Element => (
       }}
     >
       <CBHeader />
-      <CBHomeSection />
-      <CBAboutSection />
-      <CBProjectsSection />
-      <CBContactSection />
+      <Box
+        sx={{
+          marginTop: theme.spacing(4),
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <CBHomeSection />
+        <CBAboutSection />
+        <CBProjectsSection />
+        <CBContactSection />
+      </Box>
     </Box>
   </ThemeProvider>
 );
