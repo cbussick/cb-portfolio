@@ -1,7 +1,7 @@
 import { Box, Toolbar, Typography } from "@mui/material";
 import React from "react";
+import { HeaderLink } from "../../interfaces/HeaderLink";
 import { StyledHeader, StyledHeaderLink } from "./CBHeaderStyles";
-import { HeaderLink } from "./HeaderLink";
 
 const headerLinks: HeaderLink[] = [
   { id: "", label: "Home" },
