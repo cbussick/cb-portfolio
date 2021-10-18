@@ -1,15 +1,17 @@
 import React from "react";
+import { getHeaderLinkForSection } from "../CBHeader/headerLinkData";
 import { CBSectionContainerProps } from "./CBSectionContainerInterfaces";
-import { StyledRoot } from "./CBSectionContainerStyles";
+import { StyledContainer } from "./CBSectionContainerStyles";
 
 const CBSectionContainer = (props: CBSectionContainerProps): JSX.Element => (
-  <StyledRoot
+  <StyledContainer
     {...props}
     maxWidth={false}
     backgroundColor={props.backgroundColor}
+    id={getHeaderLinkForSection(props.section)?.id}
   >
     {props.children}
-  </StyledRoot>
+  </StyledContainer>
 );
 
 export default CBSectionContainer;

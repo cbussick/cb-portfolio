@@ -22,7 +22,6 @@ const App = (): JSX.Element => (
       <CBHeader />
       <Box
         sx={{
-          marginTop: theme.spacing(4),
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",

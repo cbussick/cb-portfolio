@@ -1,15 +1,16 @@
 import { Container, styled } from "@mui/material";
-import { StyledRootProps } from "./CBSectionContainerInterfaces";
+import { StyledContainerProps } from "./CBSectionContainerInterfaces";
 
-const shouldForwardProp = (prop: keyof StyledRootProps) =>
+const shouldForwardProp = (prop: keyof StyledContainerProps) =>
   prop !== "backgroundColor";
 
-export const StyledRoot = styled(Container, {
+export const StyledContainer = styled(Container, {
   shouldForwardProp,
-})<StyledRootProps>(({ theme, ...props }) => ({
+})<StyledContainerProps>(({ theme, ...props }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   height: "100vh",
+  paddingTop: theme.spacing(12),
   backgroundColor: props.backgroundColor,
 }));

@@ -11,22 +11,18 @@ const CBHeader = (): JSX.Element => {
   ));
 
   return (
-    <>
-      <StyledHeader>
-        <Toolbar component="nav">
-          <Typography
-            variant="h5"
-            component="div"
-            sx={{ flexGrow: 1, fontWeight: 600 }}
-          >
-            👋 Christopher Bussick
-          </Typography>
-          <Box>{headerElements}</Box>
-        </Toolbar>
-      </StyledHeader>
-      {/* Necessary for spacing so that the page content is not hidden under the header */}
-      <Toolbar />
-    </>
+    <StyledHeader>
+      <Toolbar component="nav">
+        <Typography
+          variant="h5"
+          component="div"
+          sx={{ flexGrow: 1, fontWeight: 600 }}
+        >
+          👋 Christopher Bussick
+        </Typography>
+        <Box>{headerElements}</Box>
+      </Toolbar>
+    </StyledHeader>
   );
 };
 
