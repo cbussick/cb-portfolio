@@ -9,7 +9,8 @@ const CBProjectsSection = (): JSX.Element => (
     <Typography variant="h1" component="div" sx={{ textAlign: "center" }}>
       💡👷
       <br />
-      <CBTextGradient variant="h1">Projects</CBTextGradient> I&apos;ve worked on
+      Some <CBTextGradient variant="h1">Projects</CBTextGradient> I&apos;ve
+      worked on
     </Typography>
   </CBSectionContainer>
 );
