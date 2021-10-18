@@ -1,11 +1,11 @@
 import "@fontsource/quicksand";
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
-import CBAboutSection from "./CBAboutSection/CBAboutSection";
-import CBContactSection from "./CBContactSection/CBContactSection";
-import CBHeader from "./CBHeader/CBHeader";
-import CBHomeSection from "./CBHomeSection/CBHomeSection";
-import CBProjectsSection from "./CBProjectsSection/CBProjectsSection";
+import CBHeader from "./components/CBHeader/CBHeader";
+import CBAboutSection from "./components/sections/CBAboutSection/CBAboutSection";
+import CBContactSection from "./components/sections/CBContactSection/CBContactSection";
+import CBHomeSection from "./components/sections/CBHomeSection/CBHomeSection";
+import CBProjectsSection from "./components/sections/CBProjectsSection/CBProjectsSection";
 import theme from "./theme/theme";
 
 const App = (): JSX.Element => (
