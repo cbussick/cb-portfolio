@@ -74,10 +74,11 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
       </CardContent>
       <CardActions disableSpacing>
         <Button
-          href={project.url}
           variant="contained"
           aria-label="go to the project"
           endIcon={<DoubleArrow />}
+          href={project.url}
+          target="_blank"
         >
           Take me to the project!
         </Button>
