@@ -18,6 +18,9 @@ const theme = createTheme({
     body1: {
       fontSize: "2rem",
     },
+    body2: {
+      fontSize: "1.6rem",
+    },
   },
 });
 
@@ -35,6 +38,14 @@ const themeWithOverrides: Theme = {
             color: theme.palette.primary.contrastText,
             background: `linear-gradient(180deg, rgba(255,255,255,0) 0%, ${theme.palette.primary.light} 6%, ${theme.palette.primary.light} 94%, rgba(255,255,255,0) 100%)`,
           },
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: "none",
+          fontSize: theme.typography.body2.fontSize,
         },
       },
     },
