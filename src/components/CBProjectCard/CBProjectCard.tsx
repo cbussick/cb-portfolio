@@ -5,7 +5,9 @@ import {
   CardContent,
   CardHeader,
   CardMedia,
+  Divider,
   Typography,
+  useTheme,
 } from "@mui/material";
 import React from "react";
 import ReactPlayer from "react-player";
@@ -15,10 +17,12 @@ import { CBProjectCardProps } from "./CBProjectCardInterfaces";
 import { StyledCard } from "./CBProjectCardStyles";
 
 const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
+  const theme = useTheme();
+
   const { project } = props;
 
   return (
-    <StyledCard sx={{ maxWidth: 545 }}>
+    <StyledCard sx={{ maxWidth: 545, p: theme.spacing(2) }}>
       <CardHeader
         title={project.name}
         titleTypographyProps={{
@@ -27,7 +31,11 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
           // Necessary because the `fontWeight` from the `CBTextGradient` is ignored here for whatever reason
           fontWeight: 600,
         }}
+        sx={{
+          pt: 0,
+        }}
       />
+      <Divider sx={{ mb: theme.spacing(3) }} />
       {project.thumbnailType !== ProjectThumbnailType.None && (
         <CardMedia
           component={

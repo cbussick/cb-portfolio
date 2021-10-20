@@ -30,7 +30,7 @@ const CBProjectsSection = (): JSX.Element => {
 
       <Grid
         container
-        spacing={2}
+        spacing={9}
         sx={{ display: "flex", justifyContent: "center" }}
       >
         {projectCards}
