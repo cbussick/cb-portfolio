@@ -49,6 +49,13 @@ const themeWithOverrides: Theme = {
         },
       },
     },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          boxShadow: theme.shadows[10],
+        },
+      },
+    },
   },
 };
 

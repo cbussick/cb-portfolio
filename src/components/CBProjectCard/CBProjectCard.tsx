@@ -8,6 +8,8 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import ReactPlayer from "react-player";
+import { ProjectThumbnailType } from "../../interfaces/Project";
 import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { CBProjectCardProps } from "./CBProjectCardInterfaces";
 import { StyledCard } from "./CBProjectCardStyles";
@@ -26,7 +28,36 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
           fontWeight: 600,
         }}
       />
-      <CardMedia component="img" image={project.thumbnail} alt={project.name} />
+      {project.thumbnailType !== ProjectThumbnailType.None && (
+        <CardMedia
+          component={
+            project.thumbnailType === ProjectThumbnailType.Image
+              ? "img"
+              : ReactPlayer
+          }
+          image={
+            project.thumbnailType === ProjectThumbnailType.Image
+              ? project.thumbnail
+              : undefined
+          }
+          alt={
+            project.thumbnailType === ProjectThumbnailType.Image
+              ? project.name
+              : undefined
+          }
+          url={
+            project.thumbnailType === ProjectThumbnailType.Video
+              ? project.url
+              : undefined
+          }
+          controls={
+            project.thumbnailType === ProjectThumbnailType.Video
+              ? true
+              : undefined
+          }
+          width="100%"
+        />
+      )}
       <CardContent>
         <Typography variant="body2" color="text.primary">
           {project.description}

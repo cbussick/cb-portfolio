@@ -2,6 +2,7 @@ import { Link } from "@mui/material";
 import React from "react";
 import { Project, ProjectThumbnailType } from "../../../interfaces/Project";
 import bpmTapper from "../../../resources/bpm-tapper-thumbnail.png";
+import portfolio from "../../../resources/portfolio-website.png";
 
 export const projects: Project[] = [
   {
@@ -48,7 +49,7 @@ export const projects: Project[] = [
     id: "portfolio-website",
     name: "Portfolio Website",
     thumbnailType: ProjectThumbnailType.Image,
-    thumbnail: "/",
+    thumbnail: portfolio,
     url: "https://www.christopherbussick.com/",
     description: (
       <>The website you are currently on! It serves as my digital portfolio.</>
