@@ -3,12 +3,14 @@ import React from "react";
 import { Project, ProjectThumbnailType } from "../../../interfaces/Project";
 import bpmTapper from "../../../resources/bpm-tapper-thumbnail.png";
 import portfolio from "../../../resources/portfolio-website.png";
+import vbsLogo from "../../../resources/vbs-logo.svg";
 
 export const projects: Project[] = [
   {
     id: "virtual-boxing-simulator",
     name: "Virtual Boxing Simulator",
-    thumbnailType: ProjectThumbnailType.Video,
+    thumbnailType: ProjectThumbnailType.Image,
+    thumbnail: vbsLogo,
     url: "https://www.youtube.com/watch?v=3zIW1LwYYDQ",
     description: (
       <>

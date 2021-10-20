@@ -22,7 +22,7 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
   const { project } = props;
 
   return (
-    <StyledCard sx={{ maxWidth: 545, p: theme.spacing(2) }}>
+    <StyledCard sx={{ maxWidth: 600, p: theme.spacing(2) }}>
       <CardHeader
         title={project.name}
         titleTypographyProps={{
@@ -30,6 +30,7 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
           component: CBTextGradient,
           // Necessary because the `fontWeight` from the `CBTextGradient` is ignored here for whatever reason
           fontWeight: 600,
+          display: "inline",
         }}
         sx={{
           pt: 0,
@@ -73,10 +74,11 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
       </CardContent>
       <CardActions disableSpacing>
         <Button
-          href={project.url}
           variant="contained"
           aria-label="go to the project"
           endIcon={<DoubleArrow />}
+          href={project.url}
+          target="_blank"
         >
           Take me to the project!
         </Button>
