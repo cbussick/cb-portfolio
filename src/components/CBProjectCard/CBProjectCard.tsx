@@ -32,6 +32,8 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
           fontWeight: 600,
           display: "inline",
         }}
+        subheader={<>Tech Stack: {project.techStack.join(", ")}</>}
+        subheaderTypographyProps={{ variant: "caption" }}
         sx={{
           pt: 0,
         }}

@@ -24,6 +24,20 @@ export const projects: Project[] = [
         customization.
       </>
     ),
+    techStack: ["Unreal Engine", "Blueprints", "Oculus Quest"],
+  },
+  {
+    id: "portfolio-website",
+    name: "Portfolio Website",
+    thumbnailType: ProjectThumbnailType.Image,
+    thumbnail: portfolio,
+    url: "https://www.christopherbussick.com/",
+    description: (
+      <>
+        The website you are currently on! It serves as my digital portfolio 🚀
+      </>
+    ),
+    techStack: ["React", "TypeScript", "ESLint", "Prettier", "Husky"],
   },
   {
     id: "bpm-tapper",
@@ -46,15 +60,6 @@ export const projects: Project[] = [
         browser-based.
       </>
     ),
-  },
-  {
-    id: "portfolio-website",
-    name: "Portfolio Website",
-    thumbnailType: ProjectThumbnailType.Image,
-    thumbnail: portfolio,
-    url: "https://www.christopherbussick.com/",
-    description: (
-      <>The website you are currently on! It serves as my digital portfolio.</>
-    ),
+    techStack: ["React", "JavaScript"],
   },
 ];
