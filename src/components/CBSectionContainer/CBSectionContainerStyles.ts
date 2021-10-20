@@ -10,7 +10,7 @@ export const StyledContainer = styled(Container, {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  height: "100vh",
+  minHeight: "100vh",
   paddingTop: theme.spacing(12),
   backgroundColor: props.backgroundColor,
 }));

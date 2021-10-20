@@ -1,7 +1,7 @@
 import { Box, Link, Typography, useTheme } from "@mui/material";
 import React from "react";
 import { Section } from "../../../interfaces/Section";
-import me from "../../../resources/IMG-20190501-WA0004.jpg";
+import meAndBruno from "../../../resources/me-and-bruno.jpg";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
 import CBTextGradient from "../../CBTextGradient/CBTextGradient";
 
@@ -18,7 +18,7 @@ const CBHomeSection = (): JSX.Element => {
         </Box>
         <Typography>
           <img
-            src={me}
+            src={meAndBruno}
             alt="It's me! :)"
             style={{
               height: 550,
