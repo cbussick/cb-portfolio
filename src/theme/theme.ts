@@ -21,6 +21,9 @@ const theme = createTheme({
     body2: {
       fontSize: "1.6rem",
     },
+    caption: {
+      fontSize: "1.2rem",
+    },
   },
 });
 
