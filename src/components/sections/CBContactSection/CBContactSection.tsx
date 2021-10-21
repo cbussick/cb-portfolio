@@ -9,7 +9,7 @@ const CBContactSection = (): JSX.Element => (
     <Typography variant="h1" component="div" sx={{ textAlign: "center" }}>
       👋
       <br />
-      <CBTextGradient variant="h1">Reach out</CBTextGradient> to me! :)
+      <CBTextGradient variant="h1">Reach out</CBTextGradient> to me!
     </Typography>
   </CBSectionContainer>
 );
