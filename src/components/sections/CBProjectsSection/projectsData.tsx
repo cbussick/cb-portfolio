@@ -1,7 +1,7 @@
 import { Link } from "@mui/material";
 import React from "react";
 import { Project, ProjectThumbnailType } from "../../../interfaces/Project";
-import bpmTapper from "../../../resources/bpm-tapper-thumbnail.png";
+import bpmTapper from "../../../resources/bpm-tapper.png";
 import portfolio from "../../../resources/portfolio-website.png";
 import vbsLogo from "../../../resources/vbs-logo.svg";
 
