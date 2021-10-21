@@ -1,4 +1,8 @@
 import { Card, styled } from "@mui/material";
 
-// eslint-disable-next-line
-export const StyledCard = styled(Card)(({ theme, ...props }) => ({}));
+export const StyledCard = styled(Card)(({ theme }) => ({
+  maxWidth: 600,
+  padding: theme.spacing(2),
+  display: "flex",
+  flexDirection: "column",
+}));
