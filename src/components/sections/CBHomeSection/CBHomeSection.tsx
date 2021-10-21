@@ -9,15 +9,15 @@ const CBHomeSection = (): JSX.Element => {
   const theme = useTheme();
 
   return (
-    <CBSectionContainer section={Section.Home} sx={{ textAlign: "center" }}>
-      <Typography variant="h1" component="div">
+    <CBSectionContainer section={Section.Home}>
+      <Typography variant="h1" component="div" sx={{ textAlign: "center" }}>
         👋
         <br />
         <CBTextGradient variant="h1">Welcome</CBTextGradient>
       </Typography>
-      <Typography>
-        I&apos;m Christopher! :)
-        <br /> I work in software development for both the web and{" "}
+      <Typography sx={{ textAlign: "justify" }}>
+        I&apos;m Christopher!
+        <br />I work in software development for both the web and{" "}
         <Link
           href="https://en.wikipedia.org/wiki/Virtual_reality"
           target="_blank"
