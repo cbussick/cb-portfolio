@@ -1,5 +1,5 @@
 import "@fontsource/quicksand";
-import { Box, CssBaseline, ThemeProvider } from "@mui/material";
+import { Container, CssBaseline, ThemeProvider } from "@mui/material";
 import React from "react";
 import CBHeader from "./components/CBHeader/CBHeader";
 import CBAboutSection from "./components/sections/CBAboutSection/CBAboutSection";
@@ -11,7 +11,8 @@ import theme from "./theme/theme";
 const App = (): JSX.Element => (
   <ThemeProvider theme={theme}>
     <CssBaseline />
-    <Box
+    <Container
+      maxWidth={false}
       sx={{
         display: "flex",
         flexDirection: "column",
@@ -24,7 +25,7 @@ const App = (): JSX.Element => (
       <CBAboutSection />
       <CBProjectsSection />
       <CBContactSection />
-    </Box>
+    </Container>
   </ThemeProvider>
 );
 
