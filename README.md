@@ -1,4 +1,4 @@
-# Christopher Bussick's Portfolio Website
+# Christopher Bussick's Epic Portfolio Website Extravaganza 🚀
 
 ## Available Scripts
 
