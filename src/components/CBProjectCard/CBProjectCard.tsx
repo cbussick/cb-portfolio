@@ -22,7 +22,7 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
   const { project } = props;
 
   return (
-    <StyledCard sx={{ maxWidth: 600, p: theme.spacing(2) }}>
+    <StyledCard>
       <CardHeader
         title={project.name}
         titleTypographyProps={{
@@ -78,7 +78,7 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
           {project.description}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+      <CardActions disableSpacing sx={{ flexGrow: 1, alignItems: "flex-end" }}>
         <Button
           variant="contained"
           aria-label="go to the project"
