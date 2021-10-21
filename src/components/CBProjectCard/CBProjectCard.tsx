@@ -70,7 +70,11 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
         />
       )}
       <CardContent>
-        <Typography variant="body2" color="text.primary">
+        <Typography
+          variant="body2"
+          color="text.primary"
+          sx={{ textAlign: "justify" }}
+        >
           {project.description}
         </Typography>
       </CardContent>

@@ -8,7 +8,7 @@ const CBSectionContainer = (props: CBSectionContainerProps): JSX.Element => {
   return (
     <StyledContainer
       {...props}
-      maxWidth={false}
+      maxWidth="xl"
       backgroundColor={props.backgroundColor}
       id={sectionId || undefined}
     >
