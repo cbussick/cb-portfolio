@@ -41,30 +41,30 @@ const CBHomeSection = (): JSX.Element => {
         in Gelsenkirchen, Germany 🇩🇪. Apart from computer science stuff I also
         enjoy anime/manga, sports and music production. I currently live in
         Gladbeck.
-        <figure
-          style={{
-            padding: 0,
-            margin: 0,
-            marginTop: theme.spacing(7),
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          <img
-            src={meAndBruno}
-            alt="It's me! :)"
-            style={{
-              width: 650,
-              maxWidth: "100%",
-              boxShadow: theme.shadows[10],
-            }}
-          />
-          <figcaption style={{ textAlign: "start" }}>
-            <Typography variant="caption">Me and Bruno :)</Typography>
-          </figcaption>
-        </figure>
       </Typography>
+      <figure
+        style={{
+          padding: 0,
+          margin: 0,
+          marginTop: theme.spacing(7),
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <img
+          src={meAndBruno}
+          alt="It's me! :)"
+          style={{
+            width: 650,
+            maxWidth: "100%",
+            boxShadow: theme.shadows[10],
+          }}
+        />
+        <figcaption style={{ textAlign: "start" }}>
+          <Typography variant="caption">Me and Bruno :)</Typography>
+        </figcaption>
+      </figure>
     </CBSectionContainer>
   );
 };
