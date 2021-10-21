@@ -33,6 +33,15 @@ const theme = createTheme({
 const themeWithOverrides: Theme = {
   ...theme,
   components: {
+    MuiContainer: {
+      styleOverrides: {
+        root: {
+          "& address": {
+            fontStyle: "normal",
+          },
+        },
+      },
+    },
     MuiLink: {
       styleOverrides: {
         root: {

@@ -10,6 +10,8 @@ const CBSectionContainer = (props: CBSectionContainerProps): JSX.Element => {
       {...props}
       maxWidth="xl"
       backgroundColor={props.backgroundColor}
+      // `|| undefined` is necessary to not pass the sectionId prop to the DOM element
+      // when the returned `sectionId` is an empty string ("")
       id={sectionId || undefined}
     >
       {props.children}
