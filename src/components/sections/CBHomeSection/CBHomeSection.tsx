@@ -10,13 +10,7 @@ const CBHomeSection = (): JSX.Element => {
 
   return (
     <CBSectionContainer section={Section.Home} sx={{ textAlign: "center" }}>
-      <Typography
-        variant="h1"
-        component="div"
-        sx={{
-          marginBottom: theme.spacing(5),
-        }}
-      >
+      <Typography variant="h1" component="div">
         👋
         <br />
         <CBTextGradient variant="h1">Welcome</CBTextGradient>
