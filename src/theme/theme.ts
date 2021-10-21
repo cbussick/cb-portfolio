@@ -16,7 +16,7 @@ const theme = createTheme({
   typography: {
     fontFamily: ["quicksand", "sans-serif"].join(", "),
     h1: {
-      marginBottom: 50,
+      marginBottom: 80,
     },
     body1: {
       fontSize: "2rem",
@@ -67,6 +67,7 @@ const themeWithOverrides: Theme = {
     MuiCard: {
       styleOverrides: {
         root: {
+          borderRadius: 12,
           boxShadow: theme.shadows[10],
         },
       },
