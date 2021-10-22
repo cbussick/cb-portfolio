@@ -1,7 +1,15 @@
 import { AppBar, Button, styled } from "@mui/material";
+import { CBHeaderProps } from "./CBHeaderInterfaces";
 
-export const StyledHeader = styled(AppBar)(({ theme }) => ({
+const shouldForwardHeaderProp = (prop: keyof CBHeaderProps) =>
+  prop !== "isPageScrolled";
+
+export const StyledHeader = styled(AppBar, {
+  shouldForwardProp: shouldForwardHeaderProp,
+})<CBHeaderProps>(({ theme, ...props }) => ({
   backgroundColor: theme.palette.background.default,
+  transition: "0.3s",
+  boxShadow: props.isPageScrolled ? theme.shadows[6] : "none",
 }));
 
 export const StyledHeaderLink = styled(Button)(({ theme }) => ({
