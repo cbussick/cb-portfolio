@@ -1,4 +1,5 @@
-import { Box, Toolbar, Typography } from "@mui/material";
+import { GitHub } from "@mui/icons-material";
+import { Box, IconButton, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import CBLogo from "../CBLogo/CBLogo";
 import { StyledHeader, StyledHeaderLink } from "./CBHeaderStyles";
@@ -22,6 +23,12 @@ const CBHeader = (): JSX.Element => {
       <Toolbar component="nav">
         <CBLogo />
         <Box>{headerElements}</Box>
+        <IconButton
+          href="https://github.com/ChristopherBussick/cb-portfolio"
+          target="_blank"
+        >
+          <GitHub titleAccess="Me on GitHub" />
+        </IconButton>
       </Toolbar>
     </StyledHeader>
   );
