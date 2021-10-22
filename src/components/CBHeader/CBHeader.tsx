@@ -2,10 +2,11 @@ import { GitHub } from "@mui/icons-material";
 import { Box, IconButton, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import CBLogo from "../CBLogo/CBLogo";
+import { CBHeaderProps } from "./CBHeaderInterfaces";
 import { StyledHeader, StyledHeaderLink } from "./CBHeaderStyles";
 import { headerLinks } from "./headerLinkData";
 
-const CBHeader = (): JSX.Element => {
+const CBHeader = (props: CBHeaderProps): JSX.Element => {
   const headerElements: JSX.Element[] = headerLinks.map((link) => (
     <StyledHeaderLink
       key={link.id}
@@ -20,7 +21,7 @@ const CBHeader = (): JSX.Element => {
   ));
 
   return (
-    <StyledHeader>
+    <StyledHeader isPageScrolled={props.isPageScrolled}>
       <Toolbar component="nav">
         <CBLogo />
         <Box>{headerElements}</Box>
