@@ -11,6 +11,7 @@ const CBHeader = (): JSX.Element => {
       key={link.id}
       href={`#${link.id}`}
       startIcon={<link.icon />}
+      classes={{ startIcon: "link-icon" }}
     >
       <Typography variant="subtitle1" component="span" className="link-label">
         {link.label}
