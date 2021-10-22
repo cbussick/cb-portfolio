@@ -86,7 +86,7 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
           href={project.url}
           target="_blank"
         >
-          Take me to the project!
+          <Typography variant="body2">Take me to the project!</Typography>
         </Button>
       </CardActions>
     </StyledCard>
