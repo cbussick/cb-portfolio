@@ -24,7 +24,7 @@ const CBHeader = (): JSX.Element => {
         <CBLogo />
         <Box>{headerElements}</Box>
         <IconButton
-          href="https://github.com/ChristopherBussick/cb-portfolio"
+          href="https://github.com/ChristopherBussick/"
           target="_blank"
         >
           <GitHub titleAccess="Me on GitHub" />
