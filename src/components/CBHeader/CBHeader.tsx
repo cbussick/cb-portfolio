@@ -23,7 +23,10 @@ const CBHeader = (): JSX.Element => {
       <Toolbar component="nav">
         <CBLogo />
         <Box>{headerElements}</Box>
-        <IconButton href="https://github.com/ChristopherBussick/cb-portfolio">
+        <IconButton
+          href="https://github.com/ChristopherBussick/cb-portfolio"
+          target="_blank"
+        >
           <GitHub titleAccess="Me on GitHub" />
         </IconButton>
       </Toolbar>
