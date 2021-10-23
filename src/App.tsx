@@ -23,20 +23,14 @@ const App = (): JSX.Element => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container
-        maxWidth={false}
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <Container maxWidth={false}>
         <CBHeader isPageScrolled={isPageScrolled} />
-        <CBHomeSection />
-        <CBAboutSection />
-        <CBProjectsSection />
-        <CBContactSection />
+        <Container maxWidth={false} component="main">
+          <CBHomeSection />
+          <CBAboutSection />
+          <CBProjectsSection />
+          <CBContactSection />
+        </Container>
       </Container>
     </ThemeProvider>
   );
