@@ -1,8 +1,11 @@
 import { AppBar, Button, styled } from "@mui/material";
-import { CBHeaderProps } from "./CBHeaderInterfaces";
+import { CBHeaderProps, CBStyledHeaderProps } from "./CBHeaderInterfaces";
 
 const shouldForwardHeaderProp = (prop: keyof CBHeaderProps) =>
   prop !== "isPageScrolled";
+
+const shouldForwardLinkProp = (prop: keyof CBStyledHeaderProps) =>
+  prop !== "isMobileViewport";
 
 export const StyledHeader = styled(AppBar, {
   shouldForwardProp: shouldForwardHeaderProp,
@@ -12,8 +15,12 @@ export const StyledHeader = styled(AppBar, {
   boxShadow: props.isPageScrolled ? theme.shadows[6] : "none",
 }));
 
-export const StyledHeaderLink = styled(Button)(({ theme }) => ({
+export const StyledHeaderLink = styled(Button, {
+  shouldForwardProp: shouldForwardLinkProp,
+})<CBStyledHeaderProps>(({ theme, ...props }) => ({
   padding: theme.spacing(2),
+  justifyContent: props.isMobileViewport ? "flex-start" : undefined,
+  paddingRight: props.isMobileViewport ? theme.spacing(5) : undefined,
   // This notation with alpha/opacity at the end is necessary to have a proper transition with a gradient on hover
   color: `${theme.palette.text.primary}FF`,
   ".link-icon": {
