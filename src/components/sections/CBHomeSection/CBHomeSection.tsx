@@ -30,7 +30,7 @@ const CBHomeSection = (): JSX.Element => {
         </Link>{" "}
         at the{" "}
         <Link href="https://www.w-hs.de/" target="_blank">
-          WHS
+          WH
         </Link>{" "}
         in Gelsenkirchen, Germany 🇩🇪. Apart from computer science stuff I also
         enjoy anime/manga, sports and music production. I currently live in

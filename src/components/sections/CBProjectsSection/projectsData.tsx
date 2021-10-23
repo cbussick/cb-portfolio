@@ -17,7 +17,7 @@ export const projects: Project[] = [
         A game simulating the sport of boxing in virtual reality. This project
         was made by our group of 6 students from the{" "}
         <Link href="https://www.w-hs.de/" target="_blank">
-          WHS
+          WH
         </Link>{" "}
         as part of our respective curricula. It features a rhythm-based game
         mode with multiple difficulties, progress recording and character
