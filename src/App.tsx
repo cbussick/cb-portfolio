@@ -16,7 +16,7 @@ import theme from "./theme/theme";
 const App = (): JSX.Element => {
   const isPageScrolled = useScrollTrigger({
     disableHysteresis: true,
-    threshold: 50,
+    threshold: 30,
     target: window,
   });
 
