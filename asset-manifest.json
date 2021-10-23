@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.js": "/cb-portfolio/static/js/main.ec631eee.chunk.js",
+    "main.js.map": "/cb-portfolio/static/js/main.ec631eee.chunk.js.map",
+    "runtime-main.js": "/cb-portfolio/static/js/runtime-main.5a9378e0.js",
+    "runtime-main.js.map": "/cb-portfolio/static/js/runtime-main.5a9378e0.js.map",
+    "static/css/2.6c8b486b.chunk.css": "/cb-portfolio/static/css/2.6c8b486b.chunk.css",
+    "static/js/2.d5775917.chunk.js": "/cb-portfolio/static/js/2.d5775917.chunk.js",
+    "static/js/2.d5775917.chunk.js.map": "/cb-portfolio/static/js/2.d5775917.chunk.js.map",
+    "index.html": "/cb-portfolio/index.html",
+    "static/css/2.6c8b486b.chunk.css.map": "/cb-portfolio/static/css/2.6c8b486b.chunk.css.map",
+    "static/js/2.d5775917.chunk.js.LICENSE.txt": "/cb-portfolio/static/js/2.d5775917.chunk.js.LICENSE.txt",
+    "static/media/bpm-tapper.02350ab3.png": "/cb-portfolio/static/media/bpm-tapper.02350ab3.png",
+    "static/media/me-and-bruno.8164df22.jpg": "/cb-portfolio/static/media/me-and-bruno.8164df22.jpg",
+    "static/media/portfolio-website.df4f385f.png": "/cb-portfolio/static/media/portfolio-website.df4f385f.png",
+    "static/media/index.css": "/cb-portfolio/static/media/quicksand-vietnamese-400-normal.5365b003.woff2",
+    "static/media/vbs-logo.774feed2.svg": "/cb-portfolio/static/media/vbs-logo.774feed2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5a9378e0.js",
+    "static/css/2.6c8b486b.chunk.css",
+    "static/js/2.d5775917.chunk.js",
+    "static/js/main.ec631eee.chunk.js"
+  ]
+}
