@@ -11,6 +11,6 @@ export const StyledContainer = styled(Container, {
   flexDirection: "column",
   alignItems: "center",
   minHeight: "100vh",
-  paddingTop: theme.spacing(12),
+  paddingTop: theme.spacing(14),
   backgroundColor: props.backgroundColor,
 }));

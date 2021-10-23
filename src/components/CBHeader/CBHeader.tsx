@@ -5,18 +5,25 @@ import {
   Toolbar,
   Typography,
   useMediaQuery,
+  useScrollTrigger,
   useTheme,
 } from "@mui/material";
 import { Twirl as Hamburger } from "hamburger-react";
 import React, { useState } from "react";
 import { scrollToElement } from "../../helpers/scrollToElement";
 import CBLogo from "../CBLogo/CBLogo";
-import { CBHeaderProps } from "./CBHeaderInterfaces";
 import { StyledHeader, StyledHeaderLink } from "./CBHeaderStyles";
 import { headerLinks } from "./headerLinkData";
 
-const CBHeader = (props: CBHeaderProps): JSX.Element => {
+const CBHeader = (): JSX.Element => {
   const theme = useTheme();
+
+  const isPageScrolled = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 10,
+    target: window,
+  });
+
   const isMobileViewport = useMediaQuery(theme.breakpoints.down("md"));
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
@@ -60,7 +67,7 @@ const CBHeader = (props: CBHeaderProps): JSX.Element => {
   });
 
   return (
-    <StyledHeader isPageScrolled={props.isPageScrolled}>
+    <StyledHeader isPageScrolled={isPageScrolled}>
       <Toolbar component="nav">
         <CBLogo />
         {isMobileViewport ? (
