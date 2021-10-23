@@ -4,7 +4,7 @@
   "private": true,
   "description": "Christopher Bussick's portfolio website",
   "author": "Christopher Bussick <bussick.christopher@gmail.com>",
-  "homepage": "https://christopherbussick.github.io/cb-portfolio",
+  "homepage": "https://www.christopherbussick.com/",
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
