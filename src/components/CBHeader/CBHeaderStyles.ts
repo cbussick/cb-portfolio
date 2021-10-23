@@ -1,23 +1,27 @@
 import { AppBar, Button, styled } from "@mui/material";
-import { CBHeaderProps, CBStyledHeaderProps } from "./CBHeaderInterfaces";
+import {
+  CBStyledHeaderLinkProps,
+  CBStyledHeaderProps,
+} from "./CBHeaderInterfaces";
 
-const shouldForwardHeaderProp = (prop: keyof CBHeaderProps) =>
+const shouldForwardHeaderProp = (prop: keyof CBStyledHeaderProps) =>
   prop !== "isPageScrolled";
 
-const shouldForwardLinkProp = (prop: keyof CBStyledHeaderProps) =>
+const shouldForwardLinkProp = (prop: keyof CBStyledHeaderLinkProps) =>
   prop !== "isMobileViewport";
 
 export const StyledHeader = styled(AppBar, {
   shouldForwardProp: shouldForwardHeaderProp,
-})<CBHeaderProps>(({ theme, ...props }) => ({
+})<CBStyledHeaderProps>(({ theme, ...props }) => ({
   backgroundColor: theme.palette.background.default,
   transition: "0.3s",
   boxShadow: props.isPageScrolled ? theme.shadows[6] : "none",
+  padding: props.isPageScrolled ? undefined : `${theme.spacing(2)} 0px`,
 }));
 
 export const StyledHeaderLink = styled(Button, {
   shouldForwardProp: shouldForwardLinkProp,
-})<CBStyledHeaderProps>(({ theme, ...props }) => ({
+})<CBStyledHeaderLinkProps>(({ theme, ...props }) => ({
   padding: theme.spacing(2),
   justifyContent: props.isMobileViewport ? "flex-start" : undefined,
   paddingRight: props.isMobileViewport ? theme.spacing(5) : undefined,
