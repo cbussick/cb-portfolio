@@ -31,7 +31,7 @@ export const projects: Project[] = [
     name: "Portfolio Website",
     thumbnailType: ProjectThumbnailType.Image,
     thumbnail: portfolio,
-    url: "https://www.christopherbussick.com/",
+    url: "https://www.cbussick.dev/",
     description: (
       <>
         The website you are currently on! It serves as my digital portfolio 🚀
