@@ -1,10 +1,9 @@
-import { Construction, Contacts, Home, Info } from "@mui/icons-material/";
+import { Construction, Contacts, Home } from "@mui/icons-material/";
 import { HeaderLink } from "../../interfaces/HeaderLink";
 import { Section } from "../../interfaces/Section";
 
 export const headerLinks: HeaderLink[] = [
   { id: "", label: "Home", section: Section.Home, icon: Home },
-  { id: "about", label: "About", section: Section.About, icon: Info },
   {
     id: "projects",
     label: "Projects",
