@@ -37,7 +37,7 @@ export const projects: Project[] = [
         The website you are currently on! It serves as my digital portfolio 🚀
       </>
     ),
-    techStack: ["React", "TypeScript", "ESLint", "Prettier", "Husky"],
+    techStack: ["React", "TypeScript", "Material UI"],
   },
   {
     id: "bpm-tapper",
