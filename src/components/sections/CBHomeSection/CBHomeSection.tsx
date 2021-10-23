@@ -17,7 +17,7 @@ const CBHomeSection = (): JSX.Element => {
       </Typography>
       <Typography sx={{ textAlign: "justify" }}>
         I&apos;m Christopher!
-        <br />I work in software development for both the web and{" "}
+        <br />I do software development for both the web and{" "}
         <Link
           href="https://en.wikipedia.org/wiki/Virtual_reality"
           target="_blank"
