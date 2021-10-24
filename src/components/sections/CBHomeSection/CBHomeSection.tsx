@@ -48,7 +48,7 @@ const CBHomeSection = (): JSX.Element => {
       >
         <img
           src={meAndBruno}
-          alt="It's me! :)"
+          alt="Me and Bruno"
           style={{
             width: 650,
             maxWidth: "100%",
