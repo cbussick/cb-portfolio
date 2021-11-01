@@ -16,7 +16,16 @@ export const StyledHeader = styled(AppBar, {
   backgroundColor: theme.palette.background.default,
   transition: "0.3s",
   boxShadow: props.isPageScrolled ? theme.shadows[6] : "none",
-  padding: props.isPageScrolled ? undefined : `${theme.spacing(2)} 0px`,
+  padding: props.isPageScrolled
+    ? undefined
+    : `${theme.spacing(1)} 0px ${theme.spacing(2)} 0px`,
+  ".hamburger-react": {
+    // Remove blue flashing when tapping the mobile menu icon
+    //
+    // Note: This property is non-standard as of 2021.11.01
+    // See https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color
+    "-webkit-tap-highlight-color": "transparent",
+  },
 }));
 
 export const StyledHeaderLink = styled(Button, {
