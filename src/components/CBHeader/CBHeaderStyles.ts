@@ -1,4 +1,4 @@
-import { AppBar, Button, styled } from "@mui/material";
+import { AppBar, Button, styled, Theme } from "@mui/material";
 import {
   CBStyledHeaderLinkProps,
   CBStyledHeaderProps,
@@ -10,6 +10,24 @@ const shouldForwardHeaderProp = (prop: keyof CBStyledHeaderProps) =>
 const shouldForwardLinkProp = (prop: keyof CBStyledHeaderLinkProps) =>
   prop !== "isMobileViewport";
 
+export const mobileMenuButtonStyles = (
+  isInsideDrawer: boolean
+): Record<string, unknown> => ({
+  ".hamburger-react": {
+    // Don't have the mobile menu icon blocked by the logo when it is absolutely positioned
+    // on small viewports
+    zIndex: 1,
+    // Remove blue flashing when tapping the mobile menu icon
+    //
+    // Note: This property is non-standard as of 2021.11.01
+    // See https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color
+    WebkitTapHighlightColor: "transparent",
+    alignSelf: isInsideDrawer ? "flex-end" : undefined,
+    marginTop: 1,
+    marginRight: 1,
+  },
+});
+
 export const StyledHeader = styled(AppBar, {
   shouldForwardProp: shouldForwardHeaderProp,
 })<CBStyledHeaderProps>(({ theme, ...props }) => ({
@@ -19,18 +37,13 @@ export const StyledHeader = styled(AppBar, {
   padding: props.isPageScrolled
     ? undefined
     : `${theme.spacing(1)} 0px ${theme.spacing(2)} 0px`,
-  ".hamburger-react": {
-    // Remove blue flashing when tapping the mobile menu icon
-    //
-    // Note: This property is non-standard as of 2021.11.01
-    // See https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color
-    "-webkit-tap-highlight-color": "transparent",
-  },
+  ...mobileMenuButtonStyles(false),
 }));
 
-export const StyledHeaderLink = styled(Button, {
-  shouldForwardProp: shouldForwardLinkProp,
-})<CBStyledHeaderLinkProps>(({ theme, ...props }) => ({
+export const headerLinkStyles = (
+  theme: Theme,
+  props: CBStyledHeaderLinkProps
+): Record<string, unknown> => ({
   padding: theme.spacing(2),
   justifyContent: props.isMobileViewport ? "flex-start" : undefined,
   paddingRight: props.isMobileViewport ? theme.spacing(5) : undefined,
@@ -57,4 +70,10 @@ export const StyledHeaderLink = styled(Button, {
       backgroundClip: "text",
     },
   },
+});
+
+export const StyledHeaderLink = styled(Button, {
+  shouldForwardProp: shouldForwardLinkProp,
+})<CBStyledHeaderLinkProps>(({ theme, ...props }) => ({
+  ...headerLinkStyles(theme, props),
 }));

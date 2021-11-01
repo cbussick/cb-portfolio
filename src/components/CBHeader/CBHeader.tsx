@@ -1,5 +1,6 @@
 import { GitHub } from "@mui/icons-material";
 import {
+  Button,
   Drawer,
   IconButton,
   Toolbar,
@@ -12,7 +13,12 @@ import { Twirl as Hamburger } from "hamburger-react";
 import React, { useState } from "react";
 import { scrollToElement } from "../../helpers/scrollToElement";
 import CBLogo from "../CBLogo/CBLogo";
-import { StyledHeader, StyledHeaderLink } from "./CBHeaderStyles";
+import {
+  headerLinkStyles,
+  mobileMenuButtonStyles,
+  StyledHeader,
+  StyledHeaderLink,
+} from "./CBHeaderStyles";
 import { headerLinks } from "./headerLinkData";
 
 const CBHeader = (): JSX.Element => {
@@ -29,17 +35,29 @@ const CBHeader = (): JSX.Element => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
-  const GitHubLink = isMobileViewport ? (
-    <StyledHeaderLink
+  const MobileMenuButton = (
+    <Hamburger
+      toggled={isMobileMenuOpen}
+      toggle={setIsMobileMenuOpen}
+      label={isMobileMenuOpen ? "Close menu" : "Show menu"}
+      size={isSmallViewport ? 24 : 32}
+      rounded
+    />
+  );
+
+  const GitHubLink = isSmallViewport ? (
+    <Button
       href="https://github.com/ChristopherBussick/"
       startIcon={<GitHub />}
       classes={{ startIcon: "link-icon" }}
-      isMobileViewport={isMobileViewport}
+      // Necessary to provide the styling like this in order to have the `target="_blank"` prop here
+      sx={{ ...headerLinkStyles(theme, { isMobileViewport }) }}
+      target="_blank"
     >
       <Typography variant="subtitle1" component="span" className="link-label">
         Me on GitHub
       </Typography>
-    </StyledHeaderLink>
+    </Button>
   ) : (
     <IconButton href="https://github.com/ChristopherBussick/" target="_blank">
       <GitHub titleAccess="Me on GitHub" />
@@ -70,17 +88,21 @@ const CBHeader = (): JSX.Element => {
   return (
     <StyledHeader isPageScrolled={isPageScrolled}>
       <Toolbar component="nav">
-        <CBLogo />
         {isMobileViewport ? (
-          <Hamburger
-            toggled={isMobileMenuOpen}
-            toggle={setIsMobileMenuOpen}
-            label={isMobileMenuOpen ? "Close menu" : "Show menu"}
-            size={isSmallViewport ? 24 : 32}
-            rounded
-          />
+          <>
+            {MobileMenuButton}
+            <CBLogo
+              isMobileViewport={isMobileViewport}
+              isSmallViewport={isSmallViewport}
+            />
+            {!isSmallViewport && GitHubLink}
+          </>
         ) : (
           <>
+            <CBLogo
+              isMobileViewport={isMobileViewport}
+              isSmallViewport={isSmallViewport}
+            />
             {headerElements}
             {GitHubLink}
           </>
@@ -90,9 +112,11 @@ const CBHeader = (): JSX.Element => {
         <Drawer
           open={isMobileMenuOpen}
           onClose={() => setIsMobileMenuOpen(false)}
+          sx={{ ...mobileMenuButtonStyles(true) }}
         >
+          {MobileMenuButton}
           {headerElements}
-          {GitHubLink}
+          {isSmallViewport && GitHubLink}
         </Drawer>
       )}
     </StyledHeader>
