@@ -16,7 +16,9 @@ export const StyledHeader = styled(AppBar, {
   backgroundColor: theme.palette.background.default,
   transition: "0.3s",
   boxShadow: props.isPageScrolled ? theme.shadows[6] : "none",
-  padding: props.isPageScrolled ? undefined : `${theme.spacing(2)} 0px`,
+  padding: props.isPageScrolled
+    ? undefined
+    : `${theme.spacing(1)} 0px ${theme.spacing(2)} 0px`,
 }));
 
 export const StyledHeaderLink = styled(Button, {
