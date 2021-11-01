@@ -24,7 +24,7 @@ export const StyledHeader = styled(AppBar, {
     //
     // Note: This property is non-standard as of 2021.11.01
     // See https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color
-    "-webkit-tap-highlight-color": "transparent",
+    WebkitTapHighlightColor: "transparent",
   },
 }));
 
