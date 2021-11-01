@@ -25,6 +25,7 @@ const CBHeader = (): JSX.Element => {
   });
 
   const isMobileViewport = useMediaQuery(theme.breakpoints.down("md"));
+  const isSmallViewport = useMediaQuery(theme.breakpoints.down("sm"));
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
@@ -71,7 +72,13 @@ const CBHeader = (): JSX.Element => {
       <Toolbar component="nav">
         <CBLogo />
         {isMobileViewport ? (
-          <Hamburger toggled={isMobileMenuOpen} toggle={setIsMobileMenuOpen} />
+          <Hamburger
+            toggled={isMobileMenuOpen}
+            toggle={setIsMobileMenuOpen}
+            label={isMobileMenuOpen ? "Close menu" : "Show menu"}
+            size={isSmallViewport ? 24 : 32}
+            rounded
+          />
         ) : (
           <>
             {headerElements}
