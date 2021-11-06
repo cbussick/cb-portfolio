@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "description": "Christopher Bussick's portfolio website",
-  "author": "Christopher Bussick <bussick.christopher@gmail.com>",
+  "author": {
+    "name": "Christopher Bussick",
+    "email": "bussick.christopher@gmail.com",
+    "url": "https://www.cbussick.dev/"
+  },
   "homepage": "https://www.cbussick.dev/",
   "dependencies": {
     "@emotion/react": "^11.4.1",
