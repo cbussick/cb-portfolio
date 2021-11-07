@@ -44,7 +44,7 @@ export const projects: Project[] = [
     name: "BPM Tapper",
     thumbnailType: ProjectThumbnailType.Image,
     thumbnail: bpmTapper,
-    url: "https://christopherbussick.github.io/bpm-tapper/",
+    url: "https://christopherbussick.github.io/bpm-tapper-sass/",
     description: (
       <>
         A bpm tapper is a tool used in music production to figure out the tempo
