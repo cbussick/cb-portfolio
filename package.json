@@ -9,6 +9,7 @@
     "url": "https://www.cbussick.dev/"
   },
   "homepage": "https://www.cbussick.dev/",
+  "license": "MIT",
   "dependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
