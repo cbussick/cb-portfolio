@@ -60,6 +60,6 @@ export const projects: Project[] = [
         browser-based.
       </>
     ),
-    techStack: ["React", "JavaScript"],
+    techStack: ["React", "TypeScript", "Chakra UI"],
   },
 ];
