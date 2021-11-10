@@ -27,6 +27,8 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+To learn about Material UI, visit the [Material UI docs](https://mui.com/).
+
 To learn TypeScript, visit the [TypeScript docs](https://www.typescriptlang.org/).
 
 To learn about ESLint, visit the [ESLint docs](https://eslint.org/).
