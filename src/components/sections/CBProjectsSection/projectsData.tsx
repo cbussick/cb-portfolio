@@ -1,5 +1,6 @@
 import { Link } from "@mui/material";
 import React from "react";
+import { cbContactInformation } from "../../../data/cbContactInformation";
 import { Project, ProjectThumbnailType } from "../../../interfaces/Project";
 import bpmTapper from "../../../resources/bpm-tapper.png";
 import portfolio from "../../../resources/portfolio-website.png";
@@ -31,7 +32,7 @@ export const projects: Project[] = [
     name: "Portfolio Website",
     thumbnailType: ProjectThumbnailType.Image,
     thumbnail: portfolio,
-    url: "https://www.cbussick.dev/",
+    url: cbContactInformation.website,
     description: (
       <>
         The website you are currently on! It serves as my digital portfolio 🚀

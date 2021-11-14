@@ -1,5 +1,6 @@
 import { Link, Typography, useTheme } from "@mui/material";
 import React from "react";
+import { cbContactInformation } from "../../../data/cbContactInformation";
 import { Section } from "../../../interfaces/Section";
 import meAndBruno from "../../../resources/me-and-bruno.jpg";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
@@ -7,6 +8,8 @@ import CBTextGradient from "../../CBTextGradient/CBTextGradient";
 
 const CBHomeSection = (): JSX.Element => {
   const theme = useTheme();
+
+  const { firstName } = cbContactInformation;
 
   return (
     <CBSectionContainer section={Section.Home}>
@@ -16,7 +19,7 @@ const CBHomeSection = (): JSX.Element => {
         <CBTextGradient variant="h1">Welcome</CBTextGradient>
       </Typography>
       <Typography sx={{ textAlign: "justify" }}>
-        I&apos;m Christopher!
+        I&apos;m {firstName}!
         <br />I do software de&shy;vel&shy;op&shy;ment for both the web and{" "}
         <Link
           href="https://en.wikipedia.org/wiki/Virtual_reality"

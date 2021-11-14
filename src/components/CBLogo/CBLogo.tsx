@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { cbContactInformation } from "../../data/cbContactInformation";
 import { scrollToElement } from "../../helpers/scrollToElement";
 import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { CBLogoProps } from "./CBLogoInterfaces";
@@ -23,7 +24,8 @@ const CBLogo = (props: CBLogoProps): JSX.Element => (
       sx={{ cursor: "pointer" }}
     >
       <Typography variant="h5" sx={{ fontWeight: 600 }}>
-        👋 <CBTextGradient variant="h5">Christopher Bussick</CBTextGradient>
+        👋{" "}
+        <CBTextGradient variant="h5">{`${cbContactInformation.firstName} ${cbContactInformation.lastName}`}</CBTextGradient>
       </Typography>
     </StyledLogo>
   </Box>

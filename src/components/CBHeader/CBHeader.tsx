@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { Twirl as Hamburger } from "hamburger-react";
 import React, { useState } from "react";
+import { cbContactInformation } from "../../data/cbContactInformation";
 import { scrollToElement } from "../../helpers/scrollToElement";
 import CBLogo from "../CBLogo/CBLogo";
 import {
@@ -45,9 +46,11 @@ const CBHeader = (): JSX.Element => {
     />
   );
 
-  const GitHubLink = isSmallViewport ? (
+  const gitHubLink = cbContactInformation.gitHub;
+
+  const GitHubLinkButton = isSmallViewport ? (
     <Button
-      href="https://github.com/ChristopherBussick/"
+      href={gitHubLink}
       startIcon={<GitHub />}
       classes={{ startIcon: "link-icon" }}
       // Necessary to provide the styling like this in order to have the `target="_blank"` prop here
@@ -59,7 +62,7 @@ const CBHeader = (): JSX.Element => {
       </Typography>
     </Button>
   ) : (
-    <IconButton href="https://github.com/ChristopherBussick/" target="_blank">
+    <IconButton href={gitHubLink} target="_blank">
       <GitHub titleAccess="Me on GitHub" />
     </IconButton>
   );
@@ -95,7 +98,7 @@ const CBHeader = (): JSX.Element => {
               isMobileViewport={isMobileViewport}
               isSmallViewport={isSmallViewport}
             />
-            {!isSmallViewport && GitHubLink}
+            {!isSmallViewport && GitHubLinkButton}
           </>
         ) : (
           <>
@@ -104,7 +107,7 @@ const CBHeader = (): JSX.Element => {
               isSmallViewport={isSmallViewport}
             />
             {headerElements}
-            {GitHubLink}
+            {GitHubLinkButton}
           </>
         )}
       </Toolbar>
@@ -116,7 +119,7 @@ const CBHeader = (): JSX.Element => {
         >
           {MobileMenuButton}
           {headerElements}
-          {isSmallViewport && GitHubLink}
+          {isSmallViewport && GitHubLinkButton}
         </Drawer>
       )}
     </StyledHeader>
