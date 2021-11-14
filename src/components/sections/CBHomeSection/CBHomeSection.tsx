@@ -17,7 +17,7 @@ const CBHomeSection = (): JSX.Element => {
       </Typography>
       <Typography sx={{ textAlign: "justify" }}>
         I&apos;m Christopher!
-        <br />I do software development for both the web and{" "}
+        <br />I do software de&shy;vel&shy;op&shy;ment for both the web and{" "}
         <Link
           href="https://en.wikipedia.org/wiki/Virtual_reality"
           target="_blank"
@@ -26,15 +26,15 @@ const CBHomeSection = (): JSX.Element => {
         </Link>{" "}
         and study{" "}
         <Link href="https://www.w-hs.de/medieninformatik-ge/" target="_blank">
-          media informatics
+          media in&shy;for&shy;ma&shy;tics
         </Link>{" "}
         at the{" "}
         <Link href="https://www.w-hs.de/" target="_blank">
           WH
         </Link>{" "}
-        in Gelsenkirchen, Germany 🇩🇪. Apart from computer science stuff I also
-        enjoy anime/manga, sports and music production. I currently live in
-        Gladbeck.
+        in Gel&shy;sen&shy;kir&shy;chen, Ger&shy;many 🇩🇪. Be&shy;sides all
+        things related to com&shy;pu&shy;ter science I also enjoy sports, music
+        pro&shy;duc&shy;tion, man&shy;ga and ani&shy;me.
       </Typography>
       <figure
         style={{
