@@ -77,10 +77,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ChristopherBussick/cb-portfolio"
+    "url": "https://github.com/cbussick/cb-portfolio"
   },
   "bugs": {
-    "url": "https://github.com/ChristopherBussick/cb-portfolio/issues"
+    "url": "https://github.com/cbussick/cb-portfolio/issues"
   },
   "lint-staged": {
     "**/*": [
