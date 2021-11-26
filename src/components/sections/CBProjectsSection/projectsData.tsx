@@ -28,8 +28,8 @@ export const projects: Project[] = [
     techStack: ["Unreal Engine", "Blueprints", "Oculus Quest"],
   },
   {
-    id: "portfolio-website",
-    name: "Portfolio Website",
+    id: "my-website",
+    name: "My Website",
     thumbnailType: ProjectThumbnailType.Image,
     thumbnail: portfolio,
     url: cbContactInformation.website,
