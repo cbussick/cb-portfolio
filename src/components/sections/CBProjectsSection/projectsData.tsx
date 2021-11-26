@@ -28,8 +28,8 @@ export const projects: Project[] = [
     techStack: ["Unreal Engine", "Blueprints", "Oculus Quest"],
   },
   {
-    id: "portfolio-website",
-    name: "Portfolio Website",
+    id: "my-website",
+    name: "My Website",
     thumbnailType: ProjectThumbnailType.Image,
     thumbnail: portfolio,
     url: cbContactInformation.website,
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     name: "BPM Tapper",
     thumbnailType: ProjectThumbnailType.Image,
     thumbnail: bpmTapper,
-    url: "https://christopherbussick.github.io/bpm-tapper",
+    url: "https://cbussick.github.io/bpm-tapper",
     description: (
       <>
         A bpm tapper is a tool used in music production to figure out the tempo

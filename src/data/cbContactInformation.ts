@@ -4,6 +4,6 @@ export const cbContactInformation: ContactInformation = {
   firstName: "Christopher",
   lastName: "Bussick",
   eMail: "bussick.christopher@gmail.com",
-  gitHub: "https://github.com/ChristopherBussick/cb-portfolio",
+  gitHub: "https://github.com/cbussick/",
   website: "https://www.cbussick.dev/",
 };
