@@ -1,6 +1,7 @@
 import { GitHub } from "@mui/icons-material";
 import {
   Button,
+  Container,
   Drawer,
   IconButton,
   Toolbar,
@@ -90,38 +91,40 @@ const CBHeader = (): JSX.Element => {
 
   return (
     <StyledHeader isPageScrolled={isPageScrolled}>
-      <Toolbar component="nav">
-        {isMobileViewport ? (
-          <>
+      <Container maxWidth="xl">
+        <Toolbar component="nav" disableGutters>
+          {isMobileViewport ? (
+            <>
+              {MobileMenuButton}
+              <CBLogo
+                isMobileViewport={isMobileViewport}
+                isSmallViewport={isSmallViewport}
+              />
+              {!isSmallViewport && GitHubLinkButton}
+            </>
+          ) : (
+            <>
+              <CBLogo
+                isMobileViewport={isMobileViewport}
+                isSmallViewport={isSmallViewport}
+              />
+              {headerElements}
+              {GitHubLinkButton}
+            </>
+          )}
+        </Toolbar>
+        {isMobileViewport && (
+          <Drawer
+            open={isMobileMenuOpen}
+            onClose={() => setIsMobileMenuOpen(false)}
+            sx={{ ...mobileMenuButtonStyles(true) }}
+          >
             {MobileMenuButton}
-            <CBLogo
-              isMobileViewport={isMobileViewport}
-              isSmallViewport={isSmallViewport}
-            />
-            {!isSmallViewport && GitHubLinkButton}
-          </>
-        ) : (
-          <>
-            <CBLogo
-              isMobileViewport={isMobileViewport}
-              isSmallViewport={isSmallViewport}
-            />
             {headerElements}
-            {GitHubLinkButton}
-          </>
+            {isSmallViewport && GitHubLinkButton}
+          </Drawer>
         )}
-      </Toolbar>
-      {isMobileViewport && (
-        <Drawer
-          open={isMobileMenuOpen}
-          onClose={() => setIsMobileMenuOpen(false)}
-          sx={{ ...mobileMenuButtonStyles(true) }}
-        >
-          {MobileMenuButton}
-          {headerElements}
-          {isSmallViewport && GitHubLinkButton}
-        </Drawer>
-      )}
+      </Container>
     </StyledHeader>
   );
 };
