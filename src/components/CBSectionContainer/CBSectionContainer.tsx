@@ -3,7 +3,7 @@ import { getHeaderLinkForSection } from "../CBHeader/headerLinkData";
 import { CBSectionContainerProps } from "./CBSectionContainerInterfaces";
 import { StyledContainer } from "./CBSectionContainerStyles";
 
-const CBSectionContainer = (props: CBSectionContainerProps): JSX.Element => {
+function CBSectionContainer(props: CBSectionContainerProps): JSX.Element {
   const sectionId = getHeaderLinkForSection(props.section)?.id;
   return (
     <StyledContainer
@@ -17,6 +17,6 @@ const CBSectionContainer = (props: CBSectionContainerProps): JSX.Element => {
       {props.children}
     </StyledContainer>
   );
-};
+}
 
 export default CBSectionContainer;

@@ -2,7 +2,7 @@ import { Typography, useTheme } from "@mui/material";
 import React from "react";
 import { CBTextGradientProps } from "./CBTextGradientInterfaces";
 
-const CBTextGradient = (props: CBTextGradientProps): JSX.Element => {
+function CBTextGradient(props: CBTextGradientProps): JSX.Element {
   const theme = useTheme();
 
   return (
@@ -18,6 +18,6 @@ const CBTextGradient = (props: CBTextGradientProps): JSX.Element => {
       }}
     />
   );
-};
+}
 
 export default CBTextGradient;

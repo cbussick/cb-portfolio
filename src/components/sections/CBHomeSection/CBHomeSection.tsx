@@ -6,7 +6,7 @@ import meAndBruno from "../../../resources/me-and-bruno.jpg";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
 import CBTextGradient from "../../CBTextGradient/CBTextGradient";
 
-const CBHomeSection = (): JSX.Element => {
+function CBHomeSection(): JSX.Element {
   const theme = useTheme();
 
   const { firstName } = cbContactInformation;
@@ -64,6 +64,6 @@ const CBHomeSection = (): JSX.Element => {
       </figure>
     </CBSectionContainer>
   );
-};
+}
 
 export default CBHomeSection;

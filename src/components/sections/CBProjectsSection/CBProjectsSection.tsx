@@ -6,7 +6,7 @@ import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
 import CBTextGradient from "../../CBTextGradient/CBTextGradient";
 import { projects } from "./projectsData";
 
-const CBProjectsSection = (): JSX.Element => {
+function CBProjectsSection(): JSX.Element {
   const projectCards = projects.map((project) => (
     <Grid item key={project.id} sx={{ display: "flex" }}>
       <CBProjectCard project={project} />
@@ -31,6 +31,6 @@ const CBProjectsSection = (): JSX.Element => {
       </Grid>
     </CBSectionContainer>
   );
-};
+}
 
 export default CBProjectsSection;
