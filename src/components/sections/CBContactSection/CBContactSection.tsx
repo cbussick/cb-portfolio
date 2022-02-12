@@ -5,7 +5,7 @@ import { Section } from "../../../interfaces/Section";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
 import CBTextGradient from "../../CBTextGradient/CBTextGradient";
 
-const CBContactSection = (): JSX.Element => {
+function CBContactSection(): JSX.Element {
   const { eMail } = cbContactInformation;
 
   return (
@@ -23,6 +23,6 @@ const CBContactSection = (): JSX.Element => {
       </Typography>
     </CBSectionContainer>
   );
-};
+}
 
 export default CBContactSection;

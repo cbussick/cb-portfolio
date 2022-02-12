@@ -23,7 +23,7 @@ import {
 } from "./CBHeaderStyles";
 import { headerLinks } from "./headerLinkData";
 
-const CBHeader = (): JSX.Element => {
+function CBHeader(): JSX.Element {
   const theme = useTheme();
 
   const isPageScrolled = useScrollTrigger({
@@ -127,6 +127,6 @@ const CBHeader = (): JSX.Element => {
       </Container>
     </StyledHeader>
   );
-};
+}
 
 export default CBHeader;

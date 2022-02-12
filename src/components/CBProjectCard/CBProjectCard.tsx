@@ -16,7 +16,7 @@ import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { CBProjectCardProps } from "./CBProjectCardInterfaces";
 import { StyledCard } from "./CBProjectCardStyles";
 
-const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
+function CBProjectCard(props: CBProjectCardProps): JSX.Element {
   const theme = useTheme();
 
   const { project } = props;
@@ -91,6 +91,6 @@ const CBProjectCard = (props: CBProjectCardProps): JSX.Element => {
       </CardActions>
     </StyledCard>
   );
-};
+}
 
 export default CBProjectCard;

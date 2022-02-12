@@ -7,18 +7,20 @@ import CBHomeSection from "./components/sections/CBHomeSection/CBHomeSection";
 import CBProjectsSection from "./components/sections/CBProjectsSection/CBProjectsSection";
 import theme from "./theme/theme";
 
-const App = (): JSX.Element => (
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <Container maxWidth={false}>
-      <CBHeader />
-      <Container maxWidth={false} component="main">
-        <CBHomeSection />
-        <CBProjectsSection />
-        <CBContactSection />
+function App(): JSX.Element {
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container maxWidth={false}>
+        <CBHeader />
+        <Container maxWidth={false} component="main">
+          <CBHomeSection />
+          <CBProjectsSection />
+          <CBContactSection />
+        </Container>
       </Container>
-    </Container>
-  </ThemeProvider>
-);
+    </ThemeProvider>
+  );
+}
 
 export default App;
