@@ -1,6 +1,8 @@
 import { Link, Typography, useTheme } from "@mui/material";
+import { motion } from "framer-motion";
 import React from "react";
 import { cbContactInformation } from "../../../data/cbContactInformation";
+import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
 import { Section } from "../../../interfaces/Section";
 import meAndBruno from "../../../resources/me-and-bruno.jpg";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
@@ -13,12 +15,21 @@ function CBHomeSection(): JSX.Element {
 
   return (
     <CBSectionContainer section={Section.Home}>
-      <Typography variant="h1" component="div" sx={{ textAlign: "center" }}>
+      <Typography
+        variant="h1"
+        sx={{ textAlign: "center" }}
+        component={motion.div}
+        {...getDefaultAnimationWithDelay(0)}
+      >
         👋
         <br />
         <CBTextGradient variant="h1">Welcome</CBTextGradient>
       </Typography>
-      <Typography sx={{ textAlign: "justify" }}>
+      <Typography
+        sx={{ textAlign: "justify" }}
+        component={motion.div}
+        {...getDefaultAnimationWithDelay(0.5)}
+      >
         I&apos;m {firstName}!
         <br />I do software de&shy;vel&shy;op&shy;ment for both the web and{" "}
         <Link
@@ -39,7 +50,7 @@ function CBHomeSection(): JSX.Element {
         things related to com&shy;pu&shy;ter science I also enjoy sports, music
         pro&shy;duc&shy;tion, man&shy;ga and ani&shy;me.
       </Typography>
-      <figure
+      <motion.figure
         style={{
           padding: 0,
           margin: 0,
@@ -48,6 +59,7 @@ function CBHomeSection(): JSX.Element {
           flexDirection: "column",
           alignItems: "center",
         }}
+        {...getDefaultAnimationWithDelay(1)}
       >
         <img
           src={meAndBruno}
@@ -61,7 +73,7 @@ function CBHomeSection(): JSX.Element {
         <figcaption style={{ textAlign: "start" }}>
           <Typography variant="caption">Me and Bruno :)</Typography>
         </figcaption>
-      </figure>
+      </motion.figure>
     </CBSectionContainer>
   );
 }
