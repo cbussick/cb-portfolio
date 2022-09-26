@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6d61856.css",
-    "main.js": "/static/js/main.f327da71.js",
+    "main.css": "/static/css/main.b262ce9d.css",
+    "main.js": "/static/js/main.f36cd740.js",
     "static/media/portfolio-website.png": "/static/media/portfolio-website.df4f385f47f203679932.png",
     "static/media/me-and-bruno.jpg": "/static/media/me-and-bruno.8164df22a1c67e6323c3.jpg",
     "static/media/bpm-tapper.png": "/static/media/bpm-tapper.fefc8cd5e1a29add5f06.png",
-    "static/media/quicksand-all-400-normal.woff": "/static/media/quicksand-all-400-normal.2744416b8dcf2110e923.woff",
-    "static/media/quicksand-latin-400-normal.woff2": "/static/media/quicksand-latin-400-normal.d71cb2a4b837b43bbad5.woff2",
-    "static/media/quicksand-latin-ext-400-normal.woff2": "/static/media/quicksand-latin-ext-400-normal.7791828d964afa8439da.woff2",
+    "static/media/quicksand-all-400-normal.woff": "/static/media/quicksand-all-400-normal.3991594f0487f37c86d5.woff",
+    "static/media/quicksand-latin-400-normal.woff2": "/static/media/quicksand-latin-400-normal.cef2e5802d843cf31dba.woff2",
+    "static/media/quicksand-latin-ext-400-normal.woff2": "/static/media/quicksand-latin-ext-400-normal.22fcff85fddc4c8cf3ff.woff2",
     "static/media/vbs-logo.svg": "/static/media/vbs-logo.7ad928ab18afc4d661ac62bf3fdccd61.svg",
-    "static/media/quicksand-vietnamese-400-normal.woff2": "/static/media/quicksand-vietnamese-400-normal.5365b00319d96e3bc966.woff2",
+    "static/media/quicksand-vietnamese-400-normal.woff2": "/static/media/quicksand-vietnamese-400-normal.001708e70ef991eec89b.woff2",
     "index.html": "/index.html",
-    "main.c6d61856.css.map": "/static/css/main.c6d61856.css.map",
-    "main.f327da71.js.map": "/static/js/main.f327da71.js.map"
+    "main.b262ce9d.css.map": "/static/css/main.b262ce9d.css.map",
+    "main.f36cd740.js.map": "/static/js/main.f36cd740.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6d61856.css",
-    "static/js/main.f327da71.js"
+    "static/css/main.b262ce9d.css",
+    "static/js/main.f36cd740.js"
   ]
 }
