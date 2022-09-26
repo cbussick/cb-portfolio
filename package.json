@@ -54,7 +54,8 @@
     "test": "echo 'no tests yet'",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --max-warnings 0",
     "typecheck": "tsc",
-    "full-check": "npm run typecheck && npm run lint && npm run test"
+    "full-check": "npm run typecheck && npm run lint && npm run test",
+    "prepare": "husky install"
   },
   "browserslist": {
     "production": [

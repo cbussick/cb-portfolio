@@ -1,9 +1,4 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-npx git-is-clean || (
-  echo "You can only push from a clean git repo." &&
-    exit 1
-)
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
 npm run full-check
