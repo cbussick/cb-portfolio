@@ -1,2 +1,1 @@
-export interface ___componentName___Props {}
-export interface StyledRootProps {}
+export interface ___Component_Name___Props {}
