@@ -17,6 +17,14 @@ You will also see any lint errors in the console.
 Checks the app for any problems.\
 Runs `npm run typecheck` for any TypeScript errors, `npm run lint` for any ESLint errors and `npm run test`.
 
+## Deploying
+
+You can deploy the app by running:
+
+`npm run deploy`
+
+For more information see the docs here: [Deploying a CRA App to GitHub Pages](https://create-react-app.dev/docs/deployment/#github-pages)
+
 ## Template
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
