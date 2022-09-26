@@ -1,8 +1,8 @@
-import { Card, styled } from "@mui/material";
+import { SxProps, Theme } from "@mui/material";
 
-export const StyledCard = styled(Card)(({ theme }) => ({
+export const CBProjectCardStyles = (theme: Theme): SxProps<Theme> => ({
   maxWidth: 600,
   padding: theme.spacing(2),
   display: "flex",
   flexDirection: "column",
-}));
+});

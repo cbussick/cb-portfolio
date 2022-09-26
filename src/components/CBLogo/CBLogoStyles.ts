@@ -1,9 +1,7 @@
-import { Link, styled } from "@mui/material";
+import { SxProps, Theme } from "@mui/material";
 
-export const StyledLogo = styled(Link)(() => ({
-  textDecoration: "none",
-  background: "transparent",
+export const CBLogoStyles = (): SxProps<Theme> => ({
   "&:hover": {
     background: "transparent",
   },
-}));
+});

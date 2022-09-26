@@ -1,7 +1,7 @@
-export interface CBStyledHeaderProps {
+export interface CBHeaderStylesProps {
   isPageScrolled: boolean;
 }
 
-export interface CBStyledHeaderLinkProps {
+export interface CBHeaderLinkStylesProps {
   isMobileViewport: boolean;
 }

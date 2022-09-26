@@ -1,10 +1,9 @@
-import { Box, Typography } from "@mui/material";
-import React from "react";
+import { Box, Button, Typography } from "@mui/material";
 import { cbContactInformation } from "../../data/cbContactInformation";
 import { scrollToElement } from "../../helpers/scrollToElement";
 import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { CBLogoProps } from "./CBLogoInterfaces";
-import { StyledLogo } from "./CBLogoStyles";
+import { CBLogoStyles } from "./CBLogoStyles";
 
 function CBLogo(props: CBLogoProps): JSX.Element {
   return (
@@ -20,15 +19,16 @@ function CBLogo(props: CBLogoProps): JSX.Element {
         zIndex: 0,
       }}
     >
-      <StyledLogo
+      <Button
+        disableRipple
         onClick={(e) => scrollToElement(e, undefined)}
-        sx={{ cursor: "pointer" }}
+        sx={CBLogoStyles()}
       >
         <Typography variant="h5" sx={{ fontWeight: 600 }}>
           👋{" "}
           <CBTextGradient variant="h5">{`${cbContactInformation.firstName} ${cbContactInformation.lastName}`}</CBTextGradient>
         </Typography>
-      </StyledLogo>
+      </Button>
     </Box>
   );
 }

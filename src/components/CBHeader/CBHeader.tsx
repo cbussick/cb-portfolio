@@ -1,5 +1,6 @@
 import { GitHub } from "@mui/icons-material";
 import {
+  AppBar,
   Button,
   Container,
   Drawer,
@@ -11,15 +12,14 @@ import {
   useTheme,
 } from "@mui/material";
 import { Twirl as Hamburger } from "hamburger-react";
-import React, { useState } from "react";
+import { useState } from "react";
 import { cbContactInformation } from "../../data/cbContactInformation";
 import { scrollToElement } from "../../helpers/scrollToElement";
 import CBLogo from "../CBLogo/CBLogo";
 import {
-  headerLinkStyles,
+  CBHeaderLinkStyles,
+  CBHeaderStyles,
   mobileMenuButtonStyles,
-  StyledHeader,
-  StyledHeaderLink,
 } from "./CBHeaderStyles";
 import { headerLinks } from "./headerLinkData";
 
@@ -55,7 +55,7 @@ function CBHeader(): JSX.Element {
       startIcon={<GitHub />}
       classes={{ startIcon: "link-icon" }}
       // Necessary to provide the styling like this in order to have the `target="_blank"` prop here
-      sx={{ ...headerLinkStyles(theme, { isMobileViewport }) }}
+      sx={CBHeaderLinkStyles(theme, { isMobileViewport })}
       target="_blank"
     >
       <Typography variant="subtitle1" component="span" className="link-label">
@@ -72,7 +72,7 @@ function CBHeader(): JSX.Element {
     const selector = link.id === "" ? undefined : `#${link.id}`;
 
     return (
-      <StyledHeaderLink
+      <Button
         key={link.id}
         href={selector}
         onClick={(e) => {
@@ -80,17 +80,17 @@ function CBHeader(): JSX.Element {
         }}
         startIcon={<link.icon />}
         classes={{ startIcon: "link-icon" }}
-        isMobileViewport={isMobileViewport}
+        sx={CBHeaderLinkStyles(theme, { isMobileViewport })}
       >
         <Typography variant="subtitle1" component="span" className="link-label">
           {link.label}
         </Typography>
-      </StyledHeaderLink>
+      </Button>
     );
   });
 
   return (
-    <StyledHeader isPageScrolled={isPageScrolled}>
+    <AppBar sx={CBHeaderStyles(theme, { isPageScrolled })}>
       <Container maxWidth="xl">
         <Toolbar component="nav" disableGutters>
           {isMobileViewport ? (
@@ -125,7 +125,7 @@ function CBHeader(): JSX.Element {
           </Drawer>
         )}
       </Container>
-    </StyledHeader>
+    </AppBar>
   );
 }
 

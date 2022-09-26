@@ -1,3 +1,2 @@
-export interface ___componentName___Props {}
-export interface ___componentName___ViewModel {}
-export interface StyledRootProps {}
+export interface ___Component_Name___Props {}
+export interface ___Component_Name___ViewModel {}

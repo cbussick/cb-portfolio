@@ -5,6 +5,6 @@ export interface CBSectionContainerProps extends ContainerProps {
   section: Section;
   backgroundColor?: string;
 }
-export interface StyledContainerProps {
+export interface CBSectionContainerStylesProps {
   backgroundColor?: string;
 }

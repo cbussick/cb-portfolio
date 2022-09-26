@@ -1,9 +1,16 @@
+import { Box, useTheme } from "@mui/material";
 import React from "react";
-import { ___componentName___Props } from "./___componentName___Interfaces";
-import { StyledRoot } from "./___componentName___Styles";
+import { ___Component_Name___Props } from "./___componentName___Interfaces";
+import { ___Component_Name___Styles } from "./___componentName___Styles";
 
-const ___Component_Name___ = (props: ___componentName___Props): JSX.Element => {
-  return <StyledRoot variant="h1">___componentName___</StyledRoot>;
-};
+function ___Component_Name___(props: ___Component_Name___Props): JSX.Element {
+  const theme = useTheme();
+
+  return (
+    <Box sx={___Component_Name___Styles(theme)}>
+      Hey ___Component_Name___ 🚀
+    </Box>
+  );
+}
 
 export default ___Component_Name___;

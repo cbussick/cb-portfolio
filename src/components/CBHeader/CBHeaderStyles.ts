@@ -1,14 +1,8 @@
-import { AppBar, Button, styled, Theme } from "@mui/material";
+import { SxProps, Theme } from "@mui/material";
 import {
-  CBStyledHeaderLinkProps,
-  CBStyledHeaderProps,
+  CBHeaderLinkStylesProps,
+  CBHeaderStylesProps,
 } from "./CBHeaderInterfaces";
-
-const shouldForwardHeaderProp = (prop: keyof CBStyledHeaderProps) =>
-  prop !== "isPageScrolled";
-
-const shouldForwardLinkProp = (prop: keyof CBStyledHeaderLinkProps) =>
-  prop !== "isMobileViewport";
 
 export const mobileMenuButtonStyles = (
   isInsideDrawer: boolean
@@ -28,9 +22,10 @@ export const mobileMenuButtonStyles = (
   },
 });
 
-export const StyledHeader = styled(AppBar, {
-  shouldForwardProp: shouldForwardHeaderProp,
-})<CBStyledHeaderProps>(({ theme, ...props }) => ({
+export const CBHeaderStyles = (
+  theme: Theme,
+  props: CBHeaderStylesProps
+): SxProps<Theme> => ({
   backgroundColor: theme.palette.background.default,
   transition: "0.3s",
   boxShadow: props.isPageScrolled ? theme.shadows[6] : "none",
@@ -38,12 +33,12 @@ export const StyledHeader = styled(AppBar, {
     ? undefined
     : `${theme.spacing(1)} 0px ${theme.spacing(2)} 0px`,
   ...mobileMenuButtonStyles(false),
-}));
+});
 
-export const headerLinkStyles = (
+export const CBHeaderLinkStyles = (
   theme: Theme,
-  props: CBStyledHeaderLinkProps
-): Record<string, unknown> => ({
+  props: CBHeaderLinkStylesProps
+): SxProps<Theme> => ({
   padding: theme.spacing(2),
   justifyContent: props.isMobileViewport ? "flex-start" : undefined,
   paddingRight: props.isMobileViewport ? theme.spacing(5) : undefined,
@@ -71,9 +66,3 @@ export const headerLinkStyles = (
     },
   },
 });
-
-export const StyledHeaderLink = styled(Button, {
-  shouldForwardProp: shouldForwardLinkProp,
-})<CBStyledHeaderLinkProps>(({ theme, ...props }) => ({
-  ...headerLinkStyles(theme, props),
-}));
