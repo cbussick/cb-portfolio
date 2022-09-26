@@ -1,6 +1,7 @@
 import { DoubleArrow } from "@mui/icons-material";
 import {
   Button,
+  Card,
   CardActions,
   CardContent,
   CardHeader,
@@ -9,12 +10,11 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import React from "react";
 import ReactPlayer from "react-player";
 import { ProjectThumbnailType } from "../../interfaces/Project";
 import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { CBProjectCardProps } from "./CBProjectCardInterfaces";
-import { StyledCard } from "./CBProjectCardStyles";
+import { CBProjectCardStyles } from "./CBProjectCardStyles";
 
 function CBProjectCard(props: CBProjectCardProps): JSX.Element {
   const theme = useTheme();
@@ -22,7 +22,7 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
   const { project } = props;
 
   return (
-    <StyledCard>
+    <Card sx={CBProjectCardStyles(theme)}>
       <CardHeader
         title={project.name}
         titleTypographyProps={{
@@ -89,7 +89,7 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
           <Typography variant="body2">Take me to the project!</Typography>
         </Button>
       </CardActions>
-    </StyledCard>
+    </Card>
   );
 }
 
