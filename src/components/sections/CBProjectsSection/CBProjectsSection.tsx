@@ -1,6 +1,5 @@
 import { Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import React from "react";
 import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
 import { Section } from "../../../interfaces/Section";
 import CBProjectCard from "../../CBProjectCard/CBProjectCard";

@@ -1,6 +1,5 @@
 import { Link, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import React from "react";
 import { cbContactInformation } from "../../../data/cbContactInformation";
 import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
 import { Section } from "../../../interfaces/Section";
