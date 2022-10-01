@@ -1,5 +1,4 @@
 import { Link } from "@mui/material";
-import React from "react";
 import { cbContactInformation } from "../../../data/cbContactInformation";
 import { Project, ProjectThumbnailType } from "../../../interfaces/Project";
 import bpmTapper from "../../../resources/bpm-tapper.png";

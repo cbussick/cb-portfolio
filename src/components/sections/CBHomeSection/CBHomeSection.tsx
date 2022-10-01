@@ -1,6 +1,5 @@
 import { Link, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
-import React from "react";
 import { cbContactInformation } from "../../../data/cbContactInformation";
 import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
 import { Section } from "../../../interfaces/Section";
@@ -21,16 +20,14 @@ function CBHomeSection(): JSX.Element {
         component={motion.div}
         {...getDefaultAnimationWithDelay(0)}
       >
-        👋
-        <br />
-        <CBTextGradient variant="h1">Welcome</CBTextGradient>
+        <CBTextGradient variant="h1">Welcome!</CBTextGradient>
       </Typography>
       <Typography
         sx={{ textAlign: "justify" }}
         component={motion.div}
         {...getDefaultAnimationWithDelay(0.5)}
       >
-        I&apos;m {firstName}!
+        Hi, I&apos;m {firstName} 👋
         <br />I do software de&shy;vel&shy;op&shy;ment for both the web and{" "}
         <Link
           href="https://en.wikipedia.org/wiki/Virtual_reality"
