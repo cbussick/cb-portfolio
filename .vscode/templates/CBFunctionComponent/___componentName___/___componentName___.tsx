@@ -1,5 +1,4 @@
 import { Box, useTheme } from "@mui/material";
-import React from "react";
 import { ___Component_Name___Props } from "./___componentName___Interfaces";
 import { ___Component_Name___Styles } from "./___componentName___Styles";
 
