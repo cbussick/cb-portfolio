@@ -54,7 +54,6 @@ function CBHeader(): JSX.Element {
       href={gitHubLink}
       startIcon={<GitHub />}
       classes={{ startIcon: "link-icon" }}
-      // Necessary to provide the styling like this in order to have the `target="_blank"` prop here
       sx={CBHeaderLinkStyles(theme, { isMobileViewport })}
       target="_blank"
     >
@@ -63,7 +62,22 @@ function CBHeader(): JSX.Element {
       </Typography>
     </Button>
   ) : (
-    <IconButton href={gitHubLink} target="_blank">
+    <IconButton
+      href={gitHubLink}
+      sx={{
+        transition: "0.2s",
+        "&& .MuiTouchRipple-child": {
+          color: theme.palette.text.primary,
+          opacity: 0.3,
+        },
+        "&:hover": {
+          // Necessary to disable the default hover `backgroundColor` of a button
+          backgroundColor: "transparent",
+          color: theme.palette.primary.main,
+        },
+      }}
+      target="_blank"
+    >
       <GitHub titleAccess="Me on GitHub" />
     </IconButton>
   );
