@@ -25,7 +25,6 @@ function CBLogo(props: CBLogoProps): JSX.Element {
         sx={CBLogoStyles()}
       >
         <Typography variant="h5" sx={{ fontWeight: 600 }}>
-          👋{" "}
           <CBTextGradient variant="h5">{`${cbContactInformation.firstName} ${cbContactInformation.lastName}`}</CBTextGradient>
         </Typography>
       </Button>
