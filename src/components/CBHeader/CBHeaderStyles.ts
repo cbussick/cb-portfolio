@@ -52,6 +52,9 @@ export const CBHeaderLinkStyles = (
     background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.primary.dark} 100%)`,
     backgroundClip: "text",
   },
+  "&& .MuiTouchRipple-child": {
+    opacity: 0.3,
+  },
   "&:hover": {
     // Necessary to disable the default hover `backgroundColor` of a button
     backgroundColor: "transparent",
