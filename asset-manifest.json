@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b262ce9d.css",
-    "main.js": "/static/js/main.389249de.js",
+    "main.js": "/static/js/main.c3400daa.js",
     "static/media/portfolio-website.png": "/static/media/portfolio-website.df4f385f47f203679932.png",
     "static/media/me-and-bruno.jpg": "/static/media/me-and-bruno.8164df22a1c67e6323c3.jpg",
     "static/media/bpm-tapper.png": "/static/media/bpm-tapper.fefc8cd5e1a29add5f06.png",
@@ -12,10 +12,10 @@
     "static/media/quicksand-vietnamese-400-normal.woff2": "/static/media/quicksand-vietnamese-400-normal.001708e70ef991eec89b.woff2",
     "index.html": "/index.html",
     "main.b262ce9d.css.map": "/static/css/main.b262ce9d.css.map",
-    "main.389249de.js.map": "/static/js/main.389249de.js.map"
+    "main.c3400daa.js.map": "/static/js/main.c3400daa.js.map"
   },
   "entrypoints": [
     "static/css/main.b262ce9d.css",
-    "static/js/main.389249de.js"
+    "static/js/main.c3400daa.js"
   ]
 }
