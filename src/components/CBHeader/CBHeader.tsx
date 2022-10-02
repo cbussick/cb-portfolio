@@ -16,11 +16,7 @@ import { useState } from "react";
 import { cbContactInformation } from "../../data/cbContactInformation";
 import { scrollToElement } from "../../helpers/scrollToElement";
 import CBLogo from "../CBLogo/CBLogo";
-import {
-  CBHeaderLinkStyles,
-  CBHeaderStyles,
-  mobileMenuButtonStyles,
-} from "./CBHeaderStyles";
+import { CBHeaderStyles, mobileMenuButtonStyles } from "./CBHeaderStyles";
 import { headerLinks } from "./headerLinkData";
 
 function CBHeader(): JSX.Element {
@@ -34,6 +30,8 @@ function CBHeader(): JSX.Element {
 
   const isMobileViewport = useMediaQuery(theme.breakpoints.down("md"));
   const isSmallViewport = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const styles = CBHeaderStyles({ isPageScrolled, isMobileViewport });
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
@@ -54,7 +52,7 @@ function CBHeader(): JSX.Element {
       href={gitHubLink}
       startIcon={<GitHub />}
       classes={{ startIcon: "link-icon" }}
-      sx={CBHeaderLinkStyles(theme, { isMobileViewport })}
+      sx={styles.link}
       target="_blank"
     >
       <Typography variant="subtitle1" component="span" className="link-label">
@@ -62,22 +60,7 @@ function CBHeader(): JSX.Element {
       </Typography>
     </Button>
   ) : (
-    <IconButton
-      href={gitHubLink}
-      sx={{
-        transition: "0.2s",
-        "&& .MuiTouchRipple-child": {
-          color: theme.palette.text.primary,
-          opacity: 0.3,
-        },
-        "&:hover": {
-          // Necessary to disable the default hover `backgroundColor` of a button
-          backgroundColor: "transparent",
-          color: theme.palette.primary.main,
-        },
-      }}
-      target="_blank"
-    >
+    <IconButton href={gitHubLink} sx={styles.gitHubButton} target="_blank">
       <GitHub titleAccess="Me on GitHub" />
     </IconButton>
   );
@@ -94,7 +77,7 @@ function CBHeader(): JSX.Element {
         }}
         startIcon={<link.icon />}
         classes={{ startIcon: "link-icon" }}
-        sx={CBHeaderLinkStyles(theme, { isMobileViewport })}
+        sx={styles.link}
       >
         <Typography variant="subtitle1" component="span" className="link-label">
           {link.label}
@@ -104,7 +87,7 @@ function CBHeader(): JSX.Element {
   });
 
   return (
-    <AppBar sx={CBHeaderStyles(theme, { isPageScrolled })}>
+    <AppBar sx={styles.header}>
       <Container maxWidth="xl">
         <Toolbar component="nav" disableGutters>
           {isMobileViewport ? (

@@ -8,21 +8,20 @@ import {
   CardMedia,
   Divider,
   Typography,
-  useTheme,
 } from "@mui/material";
 import ReactPlayer from "react-player";
 import { ProjectThumbnailType } from "../../interfaces/Project";
+import theme from "../../theme/theme";
 import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { CBProjectCardProps } from "./CBProjectCardInterfaces";
 import { CBProjectCardStyles } from "./CBProjectCardStyles";
 
 function CBProjectCard(props: CBProjectCardProps): JSX.Element {
-  const theme = useTheme();
-
   const { project } = props;
+  const styles = CBProjectCardStyles();
 
   return (
-    <Card sx={CBProjectCardStyles(theme)}>
+    <Card sx={styles.wrapper}>
       <CardHeader
         title={project.name}
         titleTypographyProps={{
