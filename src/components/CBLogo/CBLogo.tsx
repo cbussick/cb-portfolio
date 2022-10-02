@@ -6,12 +6,14 @@ import { CBLogoProps } from "./CBLogoInterfaces";
 import { CBLogoStyles } from "./CBLogoStyles";
 
 function CBLogo(props: CBLogoProps): JSX.Element {
+  const styles = CBLogoStyles(props);
+
   return (
-    <Box sx={CBLogoStyles(props).wrapper}>
+    <Box sx={styles.wrapper}>
       <Button
         disableRipple
         onClick={(e) => scrollToElement(e, undefined)}
-        sx={CBLogoStyles().button}
+        sx={styles.button}
       >
         <CBTextGradient variant="h5">{`${cbContactInformation.firstName} ${cbContactInformation.lastName}`}</CBTextGradient>
       </Button>
