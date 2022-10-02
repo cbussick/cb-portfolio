@@ -10,8 +10,7 @@ const mobileMenuButtonStyles = (
     // on small viewports
     zIndex: 1,
     // Remove blue flashing when tapping the mobile menu icon
-    //
-    // Note: This property is non-standard as of 2021.11.01
+    // Note: This property is non-standard
     // See https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-tap-highlight-color
     WebkitTapHighlightColor: "transparent",
     alignSelf: isInsideDrawer ? "flex-end" : undefined,
