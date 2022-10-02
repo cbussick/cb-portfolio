@@ -16,7 +16,7 @@ import { useState } from "react";
 import { cbContactInformation } from "../../data/cbContactInformation";
 import { scrollToElement } from "../../helpers/scrollToElement";
 import CBLogo from "../CBLogo/CBLogo";
-import { CBHeaderStyles, mobileMenuButtonStyles } from "./CBHeaderStyles";
+import { useCBHeaderStyles } from "./CBHeaderStyles";
 import { headerLinks } from "./headerLinkData";
 
 function CBHeader(): JSX.Element {
@@ -31,7 +31,7 @@ function CBHeader(): JSX.Element {
   const isMobileViewport = useMediaQuery(theme.breakpoints.down("md"));
   const isSmallViewport = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const styles = CBHeaderStyles({ isPageScrolled, isMobileViewport });
+  const styles = useCBHeaderStyles({ isPageScrolled, isMobileViewport });
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
@@ -114,7 +114,7 @@ function CBHeader(): JSX.Element {
           <Drawer
             open={isMobileMenuOpen}
             onClose={() => setIsMobileMenuOpen(false)}
-            sx={{ ...mobileMenuButtonStyles(true) }}
+            sx={styles.drawer}
           >
             {MobileMenuButton}
             {headerElements}

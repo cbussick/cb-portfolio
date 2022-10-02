@@ -2,7 +2,7 @@ import { makeSx } from "../../helpers/makeSx";
 import theme from "../../theme/theme";
 import { CBSectionContainerStylesProps } from "./CBSectionContainerInterfaces";
 
-export const CBSectionContainerStyles = (
+export const useCBSectionContainerStyles = (
   props: CBSectionContainerStylesProps
 ) =>
   makeSx({

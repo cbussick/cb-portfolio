@@ -14,11 +14,11 @@ import { ProjectThumbnailType } from "../../interfaces/Project";
 import theme from "../../theme/theme";
 import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { CBProjectCardProps } from "./CBProjectCardInterfaces";
-import { CBProjectCardStyles } from "./CBProjectCardStyles";
+import { useCBProjectCardStyles } from "./CBProjectCardStyles";
 
 function CBProjectCard(props: CBProjectCardProps): JSX.Element {
   const { project } = props;
-  const styles = CBProjectCardStyles();
+  const styles = useCBProjectCardStyles();
 
   return (
     <Card sx={styles.wrapper}>

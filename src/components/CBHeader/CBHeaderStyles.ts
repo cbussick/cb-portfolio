@@ -1,9 +1,10 @@
+import { SystemStyleObject } from "@mui/system";
 import { makeSx } from "../../helpers/makeSx";
 import { CBHeaderStylesProps } from "./CBHeaderInterfaces";
 
-export const mobileMenuButtonStyles = (
+const mobileMenuButtonStyles = (
   isInsideDrawer: boolean
-): Record<string, unknown> => ({
+): SystemStyleObject => ({
   ".hamburger-react": {
     // Don't have the mobile menu icon blocked by the logo when it is absolutely positioned
     // on small viewports
@@ -19,7 +20,7 @@ export const mobileMenuButtonStyles = (
   },
 });
 
-export const CBHeaderStyles = (props: CBHeaderStylesProps) =>
+export const useCBHeaderStyles = (props: CBHeaderStylesProps) =>
   makeSx({
     header: (theme) => ({
       backgroundColor: theme.palette.background.default,
@@ -73,4 +74,7 @@ export const CBHeaderStyles = (props: CBHeaderStylesProps) =>
         color: theme.palette.primary.main,
       },
     }),
+    drawer: {
+      ...mobileMenuButtonStyles(true),
+    },
   });

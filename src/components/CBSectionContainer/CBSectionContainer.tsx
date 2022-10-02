@@ -1,11 +1,11 @@
 import { Container } from "@mui/material";
 import { getHeaderLinkForSection } from "../CBHeader/headerLinkData";
 import { CBSectionContainerProps } from "./CBSectionContainerInterfaces";
-import { CBSectionContainerStyles } from "./CBSectionContainerStyles";
+import { useCBSectionContainerStyles } from "./CBSectionContainerStyles";
 
 function CBSectionContainer(props: CBSectionContainerProps): JSX.Element {
   const sectionId = getHeaderLinkForSection(props.section)?.id;
-  const styles = CBSectionContainerStyles(props);
+  const styles = useCBSectionContainerStyles(props);
 
   return (
     <Container

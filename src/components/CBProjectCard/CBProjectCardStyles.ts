@@ -1,7 +1,7 @@
 import { makeSx } from "../../helpers/makeSx";
 import theme from "../../theme/theme";
 
-export const CBProjectCardStyles = () =>
+export const useCBProjectCardStyles = () =>
   makeSx({
     wrapper: {
       maxWidth: 600,

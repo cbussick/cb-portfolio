@@ -1,7 +1,7 @@
 import { makeSx } from "../../helpers/makeSx";
 import { CBLogoProps } from "./CBLogoInterfaces";
 
-export const CBLogoStyles = (props: CBLogoProps) =>
+export const useCBLogoStyles = (props: CBLogoProps) =>
   makeSx({
     wrapper: () => ({
       flexGrow: 1,
