@@ -1,17 +1,16 @@
 import { makeSx } from "../../helpers/makeSx";
-import theme from "../../theme/theme";
 import { CBSectionContainerStylesProps } from "./CBSectionContainerInterfaces";
 
 export const useCBSectionContainerStyles = (
   props: CBSectionContainerStylesProps
 ) =>
   makeSx({
-    wrapper: {
+    wrapper: (theme) => ({
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       minHeight: "100vh",
       paddingTop: theme.spacing(14),
       backgroundColor: props.backgroundColor,
-    },
+    }),
   });
