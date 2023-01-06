@@ -51,18 +51,6 @@ export const projects: Project[] = [
     techStack: ["Unreal Engine", "Blueprints", "Meta Quest"],
   },
   {
-    id: "my-website",
-    name: "My Website",
-    thumbnailType: ProjectThumbnailType.Image,
-    thumbnail: portfolio,
-    description: (
-      <>
-        The website you are currently on! It serves as my digital portfolio 🚀
-      </>
-    ),
-    techStack: ["React", "TypeScript", "Material UI"],
-  },
-  {
     id: "bpm-tapper",
     name: "BPM Tapper",
     thumbnailType: ProjectThumbnailType.Image,
@@ -84,5 +72,17 @@ export const projects: Project[] = [
       </>
     ),
     techStack: ["React", "TypeScript", "Chakra UI"],
+  },
+  {
+    id: "my-website",
+    name: "My Website",
+    thumbnailType: ProjectThumbnailType.Image,
+    thumbnail: portfolio,
+    description: (
+      <>
+        The website you are currently on! It serves as my digital portfolio 🚀
+      </>
+    ),
+    techStack: ["React", "TypeScript", "Material UI"],
   },
 ];
