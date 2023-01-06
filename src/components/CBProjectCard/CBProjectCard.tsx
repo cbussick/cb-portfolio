@@ -23,7 +23,7 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
   return (
     <Card sx={styles.wrapper}>
       <CardHeader
-        title={project.name}
+        title={<a href={project.url}>{project.name}</a>}
         titleTypographyProps={{
           variant: "h3",
           component: CBTextGradient,
@@ -78,15 +78,17 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
         </Typography>
       </CardContent>
       <CardActions disableSpacing sx={{ flexGrow: 1, alignItems: "flex-end" }}>
-        <Button
-          variant="contained"
-          aria-label="go to the project"
-          endIcon={<DoubleArrow />}
-          href={project.url}
-          target="_blank"
-        >
-          <Typography variant="body2">Take me to the project!</Typography>
-        </Button>
+        {project.url && (
+          <Button
+            variant="contained"
+            aria-label="go to the project"
+            endIcon={<DoubleArrow />}
+            href={project.url}
+            target="_blank"
+          >
+            <Typography variant="body2">Take me to the project!</Typography>
+          </Button>
+        )}
       </CardActions>
     </Card>
   );

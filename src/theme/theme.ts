@@ -36,6 +36,13 @@ const theme = createTheme({
 const themeWithOverrides: Theme = {
   ...theme,
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        a: {
+          color: "inherit",
+        },
+      },
+    },
     MuiContainer: {
       styleOverrides: {
         root: {

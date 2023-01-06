@@ -1,11 +1,35 @@
 import { Link } from "@mui/material";
-import { cbContactInformation } from "../../../data/cbContactInformation";
 import { Project, ProjectThumbnailType } from "../../../interfaces/Project";
 import bpmTapper from "../../../resources/bpm-tapper.png";
 import portfolio from "../../../resources/portfolio-website.png";
 import vbsLogo from "../../../resources/vbs-logo.svg";
+import vrOfficeExercisesFarm from "../../../resources/vr-office-exercises-farm.png";
+
+const whWebsite = "https://www.w-hs.de/";
 
 export const projects: Project[] = [
+  {
+    id: "vr-office-exercises",
+    name: "VR Office Exercises",
+    thumbnailType: ProjectThumbnailType.Image,
+    thumbnail: vrOfficeExercisesFarm,
+    url: "https://www.youtube.com/watch?v=L4YNOIWra-A",
+    description: (
+      <>
+        Physical inactivity is a major cause of mortality worldwide. But
+        motivating yourself to get up and exercise can often be hard. How about
+        you put on a VR headset and do meaningful tasks in a virtual world while
+        also doing exercise in the real world? For this reason I developed the
+        VR Office Exercises as part of my bachelor thesis at the{" "}
+        <Link href={whWebsite} target="_blank">
+          WH
+        </Link>
+        . The player finds himself on a farm, helping an elderly farmer with
+        harvesting and other tasks.
+      </>
+    ),
+    techStack: ["Unreal Engine", "Blueprints", "Meta Quest 2"],
+  },
   {
     id: "virtual-boxing-simulator",
     name: "Virtual Boxing Simulator",
@@ -16,7 +40,7 @@ export const projects: Project[] = [
       <>
         A game simulating the sport of boxing in virtual reality. This project
         was made by our group of 6 students from the{" "}
-        <Link href="https://www.w-hs.de/" target="_blank">
+        <Link href={whWebsite} target="_blank">
           WH
         </Link>{" "}
         as part of our respective curricula. It features a rhythm-based game
@@ -24,14 +48,13 @@ export const projects: Project[] = [
         customization.
       </>
     ),
-    techStack: ["Unreal Engine", "Blueprints", "Oculus Quest"],
+    techStack: ["Unreal Engine", "Blueprints", "Meta Quest"],
   },
   {
     id: "my-website",
     name: "My Website",
     thumbnailType: ProjectThumbnailType.Image,
     thumbnail: portfolio,
-    url: cbContactInformation.website,
     description: (
       <>
         The website you are currently on! It serves as my digital portfolio 🚀
