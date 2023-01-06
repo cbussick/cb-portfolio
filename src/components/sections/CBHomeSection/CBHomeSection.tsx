@@ -36,7 +36,10 @@ function CBHomeSection(): JSX.Element {
           VR
         </Link>{" "}
         and study{" "}
-        <Link href="https://www.w-hs.de/medieninformatik-ge/" target="_blank">
+        <Link
+          href="https://www.w-hs.de/medieninformatik-ge-master/"
+          target="_blank"
+        >
           media in&shy;for&shy;ma&shy;tics
         </Link>{" "}
         at the{" "}
