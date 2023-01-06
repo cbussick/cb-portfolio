@@ -11,7 +11,7 @@ export interface Project {
   name: string;
   thumbnailType: ProjectThumbnailType;
   thumbnail?: string;
-  url: string;
+  url?: string;
   description: TypographyProps["children"];
   techStack: string[];
 }
