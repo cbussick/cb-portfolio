@@ -2,6 +2,7 @@ import "@fontsource/quicksand";
 import { Container, CssBaseline, ThemeProvider } from "@mui/material";
 import CBHeader from "./components/CBHeader/CBHeader";
 import CBContactSection from "./components/sections/CBContactSection/CBContactSection";
+import CBCVSection from "./components/sections/CBCVSection/CBCVSection";
 import CBHomeSection from "./components/sections/CBHomeSection/CBHomeSection";
 import CBProjectsSection from "./components/sections/CBProjectsSection/CBProjectsSection";
 import theme from "./theme/theme";
@@ -14,6 +15,7 @@ function App(): JSX.Element {
         <CBHeader />
         <Container maxWidth={false} component="main">
           <CBHomeSection />
+          <CBCVSection />
           <CBProjectsSection />
           <CBContactSection />
         </Container>
