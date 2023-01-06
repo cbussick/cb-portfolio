@@ -15,7 +15,7 @@ function CBTimeline(props: CBTimelineProps): JSX.Element {
       {props.bulletPoints.map((bulletPoint) => (
         <TimelineItem key={bulletPoint?.toString()}>
           <TimelineSeparator>
-            <TimelineDot />
+            <TimelineDot sx={styles.dot} />
             <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>{bulletPoint}</TimelineContent>

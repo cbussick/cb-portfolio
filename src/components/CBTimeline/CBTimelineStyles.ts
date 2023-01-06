@@ -9,4 +9,8 @@ export const useCBTimelineStyles = () =>
         padding: 0,
       },
     },
+    dot: (theme) => ({
+      backgroundColor: theme.palette.primary.main,
+      borderWidth: 4,
+    }),
   });
