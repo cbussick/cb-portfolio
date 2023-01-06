@@ -13,4 +13,7 @@ export const useCBTimelineStyles = () =>
       backgroundColor: theme.palette.primary.main,
       borderWidth: 4,
     }),
+    content: {
+      pb: 4,
+    },
   });
