@@ -12,13 +12,13 @@ function CBTimeline(props: CBTimelineProps): JSX.Element {
 
   return (
     <Timeline sx={styles.timeline}>
-      {props.bulletPoints.map((bulletPoint) => (
+      {props.bulletPoints.map((bulletPoint, index, array) => (
         <TimelineItem key={bulletPoint?.toString()}>
           <TimelineSeparator>
             <TimelineDot sx={styles.dot} />
-            <TimelineConnector />
+            {index !== array.length - 1 && <TimelineConnector />}
           </TimelineSeparator>
-          <TimelineContent>{bulletPoint}</TimelineContent>
+          <TimelineContent sx={{ pb: 4 }}>{bulletPoint}</TimelineContent>
         </TimelineItem>
       ))}
     </Timeline>
