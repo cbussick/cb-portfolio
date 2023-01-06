@@ -20,7 +20,7 @@ function CBCVSection(): JSX.Element {
   );
 
   return (
-    <CBSectionContainer section={Section.Home}>
+    <CBSectionContainer section={Section.CV}>
       <Typography
         variant="h1"
         sx={{ textAlign: "center" }}
