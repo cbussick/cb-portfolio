@@ -1,4 +1,4 @@
-# Christopher Bussick's Epic Website Extravaganza 🚀
+# Christopher Bussick's Epic Website 🚀
 
 ## Available Scripts
 
