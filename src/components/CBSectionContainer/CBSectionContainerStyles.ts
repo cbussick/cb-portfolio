@@ -11,6 +11,7 @@ export const useCBSectionContainerStyles = (
       alignItems: "center",
       minHeight: "100vh",
       paddingTop: theme.spacing(14),
+      paddingBottom: theme.spacing(14),
       backgroundColor: props.backgroundColor,
     }),
   });
