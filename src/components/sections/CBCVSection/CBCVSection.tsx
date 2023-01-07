@@ -35,35 +35,32 @@ function CBCVSection(): JSX.Element {
           component={motion.div}
           {...getDefaultAnimationWithDelay(0.5)}
         >
-          This is an overview of my education, work experience and skillset.
+          This is an overview of my work experience, education and skillset.
         </Typography>
-        <motion.div
-          style={{
-            marginTop: theme.spacing(7),
-          }}
-          {...getDefaultAnimationWithDelay(1)}
-        >
-          <Typography variant="h2">Education</Typography>
-          <CBTimeline bulletPoints={educationBulletPoints} />
-        </motion.div>
-        <motion.div
-          style={{
-            marginTop: theme.spacing(7),
-          }}
-          {...getDefaultAnimationWithDelay(1.5)}
-        >
-          <Typography variant="h2">Work experience</Typography>
-          <CBTimeline bulletPoints={workExperienceBulletPoints} />
-        </motion.div>
-        <motion.div
-          style={{
-            marginTop: theme.spacing(7),
-          }}
-          {...getDefaultAnimationWithDelay(2)}
-        >
-          <Typography variant="h2">Skillset</Typography>
-          Todo: Add fitting format for skillset
-        </motion.div>
+        <Box sx={{ marginTop: theme.spacing(6) }}>
+          <motion.div
+            style={{
+              marginTop: theme.spacing(4),
+            }}
+            {...getDefaultAnimationWithDelay(1.5)}
+          >
+            <Typography variant="h2">Work experience</Typography>
+            <CBTimeline bulletPoints={workExperienceBulletPoints} />
+          </motion.div>
+          <motion.div {...getDefaultAnimationWithDelay(1)}>
+            <Typography variant="h2">Education</Typography>
+            <CBTimeline bulletPoints={educationBulletPoints} />
+          </motion.div>
+          <motion.div
+            style={{
+              marginTop: theme.spacing(4),
+            }}
+            {...getDefaultAnimationWithDelay(2)}
+          >
+            <Typography variant="h2">Skillset</Typography>
+            Todo: Add fitting format for skillset
+          </motion.div>
+        </Box>
       </Box>
     </CBSectionContainer>
   );
