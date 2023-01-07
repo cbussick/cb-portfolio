@@ -2,6 +2,10 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
 import { Section } from "../../../interfaces/Section";
+import { ReactComponent as MetaQuestLogo } from "../../../resources/meta-quest-logo.svg";
+import { ReactComponent as ReactLogo } from "../../../resources/react-logo.svg";
+import { ReactComponent as TypeScriptLogo } from "../../../resources/typescript-logo.svg";
+import { ReactComponent as UELogo } from "../../../resources/ue-logo.svg";
 import CBCVCard from "../../CBCVCard/CBCVCard";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
 import CBTextGradient from "../../CBTextGradient/CBTextGradient";
@@ -48,8 +52,19 @@ function CBCVSection(): JSX.Element {
             <CBCVCard title="Education" bulletPoints={educationBulletPoints} />
           </motion.div>
           <motion.div {...getDefaultAnimationWithDelay(2)}>
-            <Typography variant="h2">Skillset</Typography>
-            Todo: Add fitting format for skillset
+            <Stack spacing={6}>
+              <Typography variant="h2">Skillset</Typography>
+              <Typography>
+                These are the technologies I am proficient with and which I
+                usually rely on when building projects.
+              </Typography>
+              <Stack direction="row" spacing={8} sx={{ maxHeight: 200 }}>
+                <ReactLogo />
+                <TypeScriptLogo />
+                <UELogo />
+                <MetaQuestLogo />
+              </Stack>
+            </Stack>
           </motion.div>
         </Stack>
       </Box>
