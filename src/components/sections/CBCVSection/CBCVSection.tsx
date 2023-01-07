@@ -1,10 +1,10 @@
-import { Box, Card, Typography, useTheme } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
 import { Section } from "../../../interfaces/Section";
+import CBCVCard from "../../CBCVCard/CBCVCard";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
 import CBTextGradient from "../../CBTextGradient/CBTextGradient";
-import CBTimeline from "../../CBTimeline/CBTimeline";
 import CVBulletPoint from "../../CVBulletPoint/CVBulletPoint";
 import { educationData, workExperienceData } from "./cvData";
 
@@ -38,32 +38,23 @@ function CBCVSection(): JSX.Element {
           This is an overview of my work experience, education and skillset.
         </Typography>
         <Box sx={{ marginTop: theme.spacing(6) }}>
-          {/* Todo: Put these cards into a reusable component */}
-          <Card
-            sx={{
-              marginTop: theme.spacing(6),
-              borderRadius: 8,
-              padding: theme.spacing(7, 6),
-              marginBottom: theme.spacing(8),
-            }}
-            component={motion.div}
-            {...getDefaultAnimationWithDelay(1)}
-          >
-            <Typography variant="h2">Work experience</Typography>
-            <CBTimeline bulletPoints={workExperienceBulletPoints} />
-          </Card>
-          <Card
-            sx={{
-              borderRadius: 8,
-              padding: theme.spacing(7, 6),
-              marginBottom: theme.spacing(8),
-            }}
-            component={motion.div}
-            {...getDefaultAnimationWithDelay(1.5)}
-          >
-            <Typography variant="h2">Education</Typography>
-            <CBTimeline bulletPoints={educationBulletPoints} />
-          </Card>
+          <motion.div {...getDefaultAnimationWithDelay(1)}>
+            <CBCVCard
+              title="Work experience"
+              bulletPoints={workExperienceBulletPoints}
+              sx={{
+                marginTop: theme.spacing(6),
+                marginBottom: theme.spacing(8),
+              }}
+            />
+          </motion.div>
+          <motion.div {...getDefaultAnimationWithDelay(1.5)}>
+            <CBCVCard
+              title="Education"
+              bulletPoints={educationBulletPoints}
+              sx={{ marginBottom: theme.spacing(8) }}
+            />
+          </motion.div>
           <motion.div
             style={{
               marginTop: theme.spacing(4),
