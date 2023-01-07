@@ -2,7 +2,9 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
 import { Section } from "../../../interfaces/Section";
+import { ReactComponent as IllustratorLogo } from "../../../resources/illustrator-logo.svg";
 import { ReactComponent as MetaQuestLogo } from "../../../resources/meta-quest-logo.svg";
+import { ReactComponent as PhotoshopLogo } from "../../../resources/photoshop-logo.svg";
 import { ReactComponent as ReactLogo } from "../../../resources/react-logo.svg";
 import { ReactComponent as TypeScriptLogo } from "../../../resources/typescript-logo.svg";
 import { ReactComponent as UELogo } from "../../../resources/ue-logo.svg";
@@ -63,6 +65,8 @@ function CBCVSection(): JSX.Element {
                 <TypeScriptLogo />
                 <UELogo />
                 <MetaQuestLogo />
+                <PhotoshopLogo />
+                <IllustratorLogo />
               </Stack>
             </Stack>
           </motion.div>
