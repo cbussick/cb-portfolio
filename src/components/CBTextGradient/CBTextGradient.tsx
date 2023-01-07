@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-import { cbGradient } from "../../helpers/cbGradient";
+import { getCBGradient } from "../../helpers/getCBGradient";
 import { CBTextGradientProps } from "./CBTextGradientInterfaces";
 
 function CBTextGradient(props: CBTextGradientProps): JSX.Element {
@@ -8,7 +8,7 @@ function CBTextGradient(props: CBTextGradientProps): JSX.Element {
       {...props}
       component="em"
       sx={{
-        background: cbGradient,
+        background: getCBGradient(),
         backgroundClip: "text",
         color: "transparent",
         fontStyle: "normal",
