@@ -4,7 +4,7 @@ import { makeSx } from "../../helpers/makeSx";
 export const useCBTimelineStyles = () =>
   makeSx({
     timeline: {
-      pb: 0,
+      p: 0,
       mb: 0,
       [`& .${timelineItemClasses.root}:before`]: {
         flex: 0,

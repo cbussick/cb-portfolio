@@ -10,7 +10,7 @@ export const useCBCVCardStyles = () =>
       p: 0,
     },
     cardContent: (theme) => ({
-      p: 0,
+      p: theme.spacing(0, 5),
       [`&:last-child`]: {
         pb: theme.spacing(3),
       },
