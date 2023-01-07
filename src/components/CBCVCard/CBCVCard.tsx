@@ -14,13 +14,13 @@ import { useCBCVCardStyles } from "./CBCVCardStyles";
 
 function CBCVCard(props: CBCVCardProps): JSX.Element {
   const styles = useCBCVCardStyles();
-  const sx: SxProps<Theme> = mergeSx(props.sx, styles.card);
+  const sxCard: SxProps<Theme> = mergeSx(props.sx, styles.card);
 
   return (
-    <Card sx={sx} component={motion.div}>
+    <Card sx={sxCard} component={motion.div}>
       <CardHeader
         title={<Typography variant="h2">{props.title}</Typography>}
-        sx={{ p: 0 }}
+        sx={styles.cardHeader}
       />
       <CardContent sx={styles.cardContent}>
         <CBTimeline bulletPoints={props.bulletPoints} />
