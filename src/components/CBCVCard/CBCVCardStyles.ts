@@ -6,4 +6,10 @@ export const useCBCVCardStyles = () =>
       borderRadius: 8,
       padding: theme.spacing(7, 6),
     }),
+    cardContent: {
+      p: 0,
+      [`&:last-child`]: {
+        pb: 0,
+      },
+    },
   });

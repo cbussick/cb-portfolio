@@ -1,4 +1,11 @@
-import { Card, SxProps, Theme, Typography } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  SxProps,
+  Theme,
+  Typography,
+} from "@mui/material";
 import { motion } from "framer-motion";
 import { mergeSx } from "../../helpers/mergeSx";
 import CBTimeline from "../CBTimeline/CBTimeline";
@@ -11,8 +18,13 @@ function CBCVCard(props: CBCVCardProps): JSX.Element {
 
   return (
     <Card sx={sx} component={motion.div}>
-      <Typography variant="h2">{props.title}</Typography>
-      <CBTimeline bulletPoints={props.bulletPoints} />
+      <CardHeader
+        title={<Typography variant="h2">{props.title}</Typography>}
+        sx={{ p: 0 }}
+      />
+      <CardContent sx={styles.cardContent}>
+        <CBTimeline bulletPoints={props.bulletPoints} />
+      </CardContent>
     </Card>
   );
 }

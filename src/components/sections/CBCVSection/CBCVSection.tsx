@@ -37,7 +37,7 @@ function CBCVSection(): JSX.Element {
         >
           This is an overview of my work experience, education and skillset.
         </Typography>
-        <Stack spacing={6} sx={{ marginTop: theme.spacing(6) }}>
+        <Stack spacing={8} sx={{ marginTop: theme.spacing(7) }}>
           <motion.div {...getDefaultAnimationWithDelay(1)}>
             <CBCVCard
               title="Work experience"
