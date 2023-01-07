@@ -15,7 +15,8 @@ function CBTimeline(props: CBTimelineProps): JSX.Element {
   return (
     <Timeline sx={styles.timeline}>
       {props.bulletPoints.map((bulletPoint, index, array) => (
-        <TimelineItem key={bulletPoint?.toString()}>
+        // eslint-disable-next-line react/no-array-index-key
+        <TimelineItem key={index}>
           <TimelineSeparator>
             <TimelineDot sx={styles.dot} />
             {index !== array.length - 1 && (
