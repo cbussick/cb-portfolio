@@ -5,13 +5,15 @@ export const useCBSectionContainerStyles = (
   props: CBSectionContainerStylesProps
 ) =>
   makeSx({
-    wrapper: (theme) => ({
+    outerContainer: {
+      background: props.background,
+    },
+    innerContainer: (theme) => ({
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
       minHeight: "100vh",
       paddingTop: theme.spacing(14),
       paddingBottom: theme.spacing(14),
-      backgroundColor: props.backgroundColor,
     }),
   });

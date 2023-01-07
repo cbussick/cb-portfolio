@@ -11,9 +11,9 @@ function App(): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth={false}>
+      <Container maxWidth={false} disableGutters>
         <CBHeader />
-        <Container maxWidth={false} component="main">
+        <Container maxWidth={false} component="main" disableGutters>
           <CBHomeSection />
           <CBCVSection />
           <CBProjectsSection />

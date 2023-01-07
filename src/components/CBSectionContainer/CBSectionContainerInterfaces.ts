@@ -3,8 +3,9 @@ import { Section } from "../../interfaces/Section";
 
 export interface CBSectionContainerProps extends ContainerProps {
   section: Section;
-  backgroundColor?: string;
+  background?: string;
 }
-export interface CBSectionContainerStylesProps {
-  backgroundColor?: string;
-}
+export type CBSectionContainerStylesProps = Pick<
+  CBSectionContainerProps,
+  "background"
+>;

@@ -8,15 +8,17 @@ function CBSectionContainer(props: CBSectionContainerProps): JSX.Element {
   const styles = useCBSectionContainerStyles(props);
 
   return (
-    <Container
-      {...props}
-      maxWidth="xl"
-      sx={styles.wrapper}
-      // `|| undefined` is necessary to not pass the sectionId prop to the DOM element
-      // when the returned `sectionId` is an empty string ("")
-      id={sectionId || undefined}
-    >
-      {props.children}
+    <Container sx={styles.outerContainer} maxWidth={false}>
+      <Container
+        {...props}
+        maxWidth="xl"
+        sx={styles.innerContainer}
+        // `|| undefined` is necessary to not pass the sectionId prop to the DOM element
+        // when the returned `sectionId` is an empty string ("")
+        id={sectionId || undefined}
+      >
+        {props.children}
+      </Container>
     </Container>
   );
 }
