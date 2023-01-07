@@ -18,14 +18,14 @@ function CBHomeSection(): JSX.Element {
         variant="h1"
         sx={{ textAlign: "center" }}
         component={motion.div}
-        {...getDefaultAnimation()}
+        {...getDefaultAnimation(0)}
       >
         <CBTextGradient variant="h1">Welcome!</CBTextGradient>
       </Typography>
       <Typography
         sx={{ textAlign: "justify" }}
         component={motion.div}
-        {...getDefaultAnimation()}
+        {...getDefaultAnimation(0.3)}
       >
         Hi, I&apos;m {firstName} 👋
         <br />I do software de&shy;vel&shy;op&shy;ment for both the web and{" "}
@@ -59,7 +59,7 @@ function CBHomeSection(): JSX.Element {
           flexDirection: "column",
           alignItems: "center",
         }}
-        {...getDefaultAnimation()}
+        {...getDefaultAnimation(0.6)}
       >
         <img
           src={meAndBruno}
