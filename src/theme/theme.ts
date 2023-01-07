@@ -77,7 +77,8 @@ const themeWithOverrides: Theme = {
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: 12,
+          borderRadius: 32,
+          padding: theme.spacing(7, 6),
           boxShadow: theme.shadows[10],
         },
       },
