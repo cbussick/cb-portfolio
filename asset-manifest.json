@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.b262ce9d.css",
-    "main.js": "/static/js/main.d3f3d6d9.js",
+    "main.js": "/static/js/main.3956b047.js",
+    "static/media/vr-office-exercises-farm.png": "/static/media/vr-office-exercises-farm.6dad3aea97689618093b.png",
     "static/media/portfolio-website.png": "/static/media/portfolio-website.df4f385f47f203679932.png",
     "static/media/me-and-bruno.jpg": "/static/media/me-and-bruno.8164df22a1c67e6323c3.jpg",
     "static/media/bpm-tapper.png": "/static/media/bpm-tapper.fefc8cd5e1a29add5f06.png",
@@ -9,13 +10,19 @@
     "static/media/quicksand-latin-400-normal.woff2": "/static/media/quicksand-latin-400-normal.cef2e5802d843cf31dba.woff2",
     "static/media/quicksand-latin-ext-400-normal.woff2": "/static/media/quicksand-latin-ext-400-normal.22fcff85fddc4c8cf3ff.woff2",
     "static/media/vbs-logo.svg": "/static/media/vbs-logo.7ad928ab18afc4d661ac62bf3fdccd61.svg",
+    "static/media/ue-logo.svg": "/static/media/ue-logo.2cb46efaa0b8bbb8a736cc4cb2ce1c59.svg",
+    "static/media/meta-quest-logo.svg": "/static/media/meta-quest-logo.d60f0039c8622b1cdec90598fb9ba606.svg",
     "static/media/quicksand-vietnamese-400-normal.woff2": "/static/media/quicksand-vietnamese-400-normal.001708e70ef991eec89b.woff2",
+    "static/media/photoshop-logo.svg": "/static/media/photoshop-logo.59472a572e2af6e96a6ab8c5a35ff868.svg",
+    "static/media/typescript-logo.svg": "/static/media/typescript-logo.73b298ca3abdb732c440b56b9c9f607e.svg",
+    "static/media/illustrator-logo.svg": "/static/media/illustrator-logo.c10daee19031ea6063f9722c7543e7f1.svg",
     "index.html": "/index.html",
+    "static/media/react-logo.svg": "/static/media/react-logo.928f956d9c8ebcffb98a8e917154a81a.svg",
     "main.b262ce9d.css.map": "/static/css/main.b262ce9d.css.map",
-    "main.d3f3d6d9.js.map": "/static/js/main.d3f3d6d9.js.map"
+    "main.3956b047.js.map": "/static/js/main.3956b047.js.map"
   },
   "entrypoints": [
     "static/css/main.b262ce9d.css",
-    "static/js/main.d3f3d6d9.js"
+    "static/js/main.3956b047.js"
   ]
 }
