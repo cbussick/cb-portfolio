@@ -30,7 +30,11 @@ function CBCVSection(): JSX.Element {
     >
       <Typography
         variant="h1"
-        sx={{ textAlign: "center", color: theme.palette.common.white }}
+        sx={{
+          textAlign: "center",
+          color: theme.palette.common.white,
+          fontWeight: 600,
+        }}
         component={motion.div}
         {...getDefaultAnimation()}
       >
