@@ -1,5 +1,8 @@
 import { timelineItemClasses } from "@mui/lab/TimelineItem";
-import { cbGradient } from "../../helpers/cbGradient";
+import {
+  CBGradientDirection,
+  getCBGradient,
+} from "../../helpers/getCBGradient";
 import { makeSx } from "../../helpers/makeSx";
 
 export const useCBTimelineStyles = () =>
@@ -17,6 +20,6 @@ export const useCBTimelineStyles = () =>
       borderWidth: 4,
     }),
     connector: {
-      background: cbGradient,
+      background: getCBGradient(CBGradientDirection.BottomToTop),
     },
   });

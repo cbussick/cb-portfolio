@@ -1,6 +1,9 @@
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
-import { cbGradient } from "../../../helpers/cbGradient";
+import {
+  CBGradientDirection,
+  getCBGradient,
+} from "../../../helpers/getCBGradient";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
 import CBCVCard from "../../CBCVCard/CBCVCard";
@@ -21,7 +24,10 @@ function CBCVSection(): JSX.Element {
   );
 
   return (
-    <CBSectionContainer section={Section.CV} background={cbGradient}>
+    <CBSectionContainer
+      section={Section.CV}
+      background={getCBGradient(CBGradientDirection.BottomToTop)}
+    >
       <Typography
         variant="h1"
         sx={{ textAlign: "center", color: theme.palette.common.white }}
