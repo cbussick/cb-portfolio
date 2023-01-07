@@ -1,11 +1,11 @@
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
+import { cbGradient } from "../../../helpers/cbGradient";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
 import CBCVCard from "../../CBCVCard/CBCVCard";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
 import CBSkillset from "../../CBSkillset/CBSkillset";
-import CBTextGradient from "../../CBTextGradient/CBTextGradient";
 import CVBulletPoint from "../../CVBulletPoint/CVBulletPoint";
 import { educationData, workExperienceData } from "./cvData";
 
@@ -21,18 +21,18 @@ function CBCVSection(): JSX.Element {
   );
 
   return (
-    <CBSectionContainer section={Section.CV}>
+    <CBSectionContainer section={Section.CV} background={cbGradient}>
       <Typography
         variant="h1"
-        sx={{ textAlign: "center" }}
+        sx={{ textAlign: "center", color: theme.palette.common.white }}
         component={motion.div}
         {...getDefaultAnimation()}
       >
-        <CBTextGradient variant="h1">CV</CBTextGradient>
+        CV
       </Typography>
       <Box sx={{ display: "flex", flexDirection: "column" }}>
         <Typography
-          sx={{ textAlign: "justify" }}
+          sx={{ textAlign: "justify", color: theme.palette.common.white }}
           component={motion.div}
           {...getDefaultAnimation()}
         >

@@ -1,4 +1,4 @@
-import { Grid2Props, Stack, Typography } from "@mui/material";
+import { Card, Grid2Props, Stack, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { ReactComponent as IllustratorLogo } from "../../resources/illustrator-logo.svg";
 import { ReactComponent as MetaQuestLogo } from "../../resources/meta-quest-logo.svg";
@@ -21,33 +21,35 @@ function CBSkillset(): JSX.Element {
   const styles = useCBSkillsetStyles();
 
   return (
-    <Stack spacing={6}>
-      <Typography variant="h2">Skillset</Typography>
-      <Typography>
-        These are the technologies I am proficient with and which I usually rely
-        on when building projects.
-      </Typography>
-      <Grid2 container spacing={12} sx={styles.grid}>
-        <Grid2 {...gridItemProps}>
-          <ReactLogo />
+    <Card sx={styles.card}>
+      <Stack spacing={6}>
+        <Typography variant="h2">Skillset</Typography>
+        <Typography>
+          These are the technologies I am proficient with and which I usually
+          rely on when building projects.
+        </Typography>
+        <Grid2 container spacing={12} sx={styles.grid}>
+          <Grid2 {...gridItemProps}>
+            <ReactLogo />
+          </Grid2>
+          <Grid2 {...gridItemProps}>
+            <TypeScriptLogo />
+          </Grid2>
+          <Grid2 {...gridItemProps}>
+            <UELogo />
+          </Grid2>
+          <Grid2 {...gridItemProps}>
+            <MetaQuestLogo />
+          </Grid2>
+          <Grid2 {...gridItemProps}>
+            <PhotoshopLogo />
+          </Grid2>
+          <Grid2 {...gridItemProps}>
+            <IllustratorLogo />
+          </Grid2>
         </Grid2>
-        <Grid2 {...gridItemProps}>
-          <TypeScriptLogo />
-        </Grid2>
-        <Grid2 {...gridItemProps}>
-          <UELogo />
-        </Grid2>
-        <Grid2 {...gridItemProps}>
-          <MetaQuestLogo />
-        </Grid2>
-        <Grid2 {...gridItemProps}>
-          <PhotoshopLogo />
-        </Grid2>
-        <Grid2 {...gridItemProps}>
-          <IllustratorLogo />
-        </Grid2>
-      </Grid2>
-    </Stack>
+      </Stack>
+    </Card>
   );
 }
 
