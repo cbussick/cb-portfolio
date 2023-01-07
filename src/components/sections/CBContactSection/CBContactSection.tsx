@@ -1,7 +1,7 @@
 import { Link, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { cbContactInformation } from "../../../data/cbContactInformation";
-import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
+import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
 import CBTextGradient from "../../CBTextGradient/CBTextGradient";
@@ -15,13 +15,13 @@ function CBContactSection(): JSX.Element {
         variant="h1"
         sx={{ textAlign: "center" }}
         component={motion.div}
-        {...getDefaultAnimationWithDelay(0)}
+        {...getDefaultAnimation()}
       >
         👋
         <br />
         <CBTextGradient variant="h1">Reach out</CBTextGradient> to me!
       </Typography>
-      <Typography component={motion.div} {...getDefaultAnimationWithDelay(0.5)}>
+      <Typography component={motion.div} {...getDefaultAnimation()}>
         You can contact me at:
         <address>
           <Link href={`mailto:${eMail}`}>{eMail}</Link>

@@ -1,7 +1,7 @@
 import { Link, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { cbContactInformation } from "../../../data/cbContactInformation";
-import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
+import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
 import meAndBruno from "../../../resources/me-and-bruno.jpg";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
@@ -18,14 +18,14 @@ function CBHomeSection(): JSX.Element {
         variant="h1"
         sx={{ textAlign: "center" }}
         component={motion.div}
-        {...getDefaultAnimationWithDelay(0)}
+        {...getDefaultAnimation(0)}
       >
         <CBTextGradient variant="h1">Welcome!</CBTextGradient>
       </Typography>
       <Typography
         sx={{ textAlign: "justify" }}
         component={motion.div}
-        {...getDefaultAnimationWithDelay(0.5)}
+        {...getDefaultAnimation(0.3)}
       >
         Hi, I&apos;m {firstName} 👋
         <br />I do software de&shy;vel&shy;op&shy;ment for both the web and{" "}
@@ -59,7 +59,7 @@ function CBHomeSection(): JSX.Element {
           flexDirection: "column",
           alignItems: "center",
         }}
-        {...getDefaultAnimationWithDelay(1)}
+        {...getDefaultAnimation(0.6)}
       >
         <img
           src={meAndBruno}

@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 import { motion } from "framer-motion";
-import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
+import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
 import CBProjectCard from "../../CBProjectCard/CBProjectCard";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
@@ -14,7 +14,7 @@ function CBProjectsSection(): JSX.Element {
       key={project.id}
       sx={{ display: "flex" }}
       component={motion.div}
-      {...getDefaultAnimationWithDelay(0.5)}
+      {...getDefaultAnimation()}
     >
       <CBProjectCard project={project} />
     </Grid>
@@ -26,7 +26,7 @@ function CBProjectsSection(): JSX.Element {
         variant="h1"
         sx={{ textAlign: "center" }}
         component={motion.div}
-        {...getDefaultAnimationWithDelay(0)}
+        {...getDefaultAnimation()}
       >
         💡👷
         <br />
