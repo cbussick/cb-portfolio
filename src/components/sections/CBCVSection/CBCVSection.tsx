@@ -22,42 +22,37 @@ function CBCVSection(): JSX.Element {
 
   return (
     <CBSectionContainer section={Section.CV}>
-      <motion.div {...getDefaultAnimation()}>
+      <Typography
+        variant="h1"
+        sx={{ textAlign: "center" }}
+        component={motion.div}
+        {...getDefaultAnimation()}
+      >
+        <CBTextGradient variant="h1">CV</CBTextGradient>
+      </Typography>
+      <Box sx={{ display: "flex", flexDirection: "column" }}>
         <Typography
-          variant="h1"
-          sx={{ textAlign: "center" }}
+          sx={{ textAlign: "justify" }}
           component={motion.div}
           {...getDefaultAnimation()}
         >
-          <CBTextGradient variant="h1">CV</CBTextGradient>
+          This is an overview of my work experience, education and skillset.
         </Typography>
-        <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <Typography
-            sx={{ textAlign: "justify" }}
-            component={motion.div}
-            {...getDefaultAnimation()}
-          >
-            This is an overview of my work experience, education and skillset.
-          </Typography>
-          <Stack spacing={12} sx={{ marginTop: theme.spacing(10) }}>
-            <motion.div {...getDefaultAnimation()}>
-              <CBCVCard
-                title="Work experience"
-                bulletPoints={workExperienceBulletPoints}
-              />
-            </motion.div>
-            <motion.div {...getDefaultAnimation()}>
-              <CBCVCard
-                title="Education"
-                bulletPoints={educationBulletPoints}
-              />
-            </motion.div>
-            <motion.div {...getDefaultAnimation()}>
-              <CBSkillset />
-            </motion.div>
-          </Stack>
-        </Box>
-      </motion.div>
+        <Stack spacing={12} sx={{ marginTop: theme.spacing(10) }}>
+          <motion.div {...getDefaultAnimation()}>
+            <CBCVCard
+              title="Work experience"
+              bulletPoints={workExperienceBulletPoints}
+            />
+          </motion.div>
+          <motion.div {...getDefaultAnimation()}>
+            <CBCVCard title="Education" bulletPoints={educationBulletPoints} />
+          </motion.div>
+          <motion.div {...getDefaultAnimation()}>
+            <CBSkillset />
+          </motion.div>
+        </Stack>
+      </Box>
     </CBSectionContainer>
   );
 }

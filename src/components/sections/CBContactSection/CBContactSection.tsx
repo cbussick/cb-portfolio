@@ -11,24 +11,22 @@ function CBContactSection(): JSX.Element {
 
   return (
     <CBSectionContainer section={Section.Contact}>
-      <motion.div {...getDefaultAnimation()}>
-        <Typography
-          variant="h1"
-          sx={{ textAlign: "center" }}
-          component={motion.div}
-          {...getDefaultAnimation()}
-        >
-          👋
-          <br />
-          <CBTextGradient variant="h1">Reach out</CBTextGradient> to me!
-        </Typography>
-        <Typography component={motion.div} {...getDefaultAnimation()}>
-          You can contact me at:
-          <address>
-            <Link href={`mailto:${eMail}`}>{eMail}</Link>
-          </address>
-        </Typography>
-      </motion.div>
+      <Typography
+        variant="h1"
+        sx={{ textAlign: "center" }}
+        component={motion.div}
+        {...getDefaultAnimation()}
+      >
+        👋
+        <br />
+        <CBTextGradient variant="h1">Reach out</CBTextGradient> to me!
+      </Typography>
+      <Typography component={motion.div} {...getDefaultAnimation()}>
+        You can contact me at:
+        <address>
+          <Link href={`mailto:${eMail}`}>{eMail}</Link>
+        </address>
+      </Typography>
     </CBSectionContainer>
   );
 }

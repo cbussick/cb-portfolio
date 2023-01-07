@@ -22,27 +22,25 @@ function CBProjectsSection(): JSX.Element {
 
   return (
     <CBSectionContainer section={Section.Projects}>
-      <motion.div {...getDefaultAnimation()}>
-        <Typography
-          variant="h1"
-          sx={{ textAlign: "center" }}
-          component={motion.div}
-          {...getDefaultAnimation()}
-        >
-          💡👷
-          <br />
-          Some <CBTextGradient variant="h1">Projects</CBTextGradient> I&apos;ve
-          Worked on
-        </Typography>
+      <Typography
+        variant="h1"
+        sx={{ textAlign: "center" }}
+        component={motion.div}
+        {...getDefaultAnimation()}
+      >
+        💡👷
+        <br />
+        Some <CBTextGradient variant="h1">Projects</CBTextGradient> I&apos;ve
+        Worked on
+      </Typography>
 
-        <Grid
-          container
-          spacing={9}
-          sx={{ display: "flex", justifyContent: "center" }}
-        >
-          {projectCards}
-        </Grid>
-      </motion.div>
+      <Grid
+        container
+        spacing={9}
+        sx={{ display: "flex", justifyContent: "center" }}
+      >
+        {projectCards}
+      </Grid>
     </CBSectionContainer>
   );
 }

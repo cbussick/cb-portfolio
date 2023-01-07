@@ -16,7 +16,10 @@ const animationVariants: Variants = {
   },
 };
 
-const viewport: MotionProps["viewport"] = { once: true };
+const viewport: MotionProps["viewport"] = {
+  once: true,
+  margin: "-200px 0px -200px 0px",
+};
 const layout: MotionProps["layout"] = true;
 
 export const getDefaultAnimation = (
