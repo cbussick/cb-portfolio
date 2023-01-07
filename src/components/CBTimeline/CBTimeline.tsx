@@ -4,11 +4,13 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import { useTheme } from "@mui/material";
 import { CBTimelineProps } from "./CBTimelineInterfaces";
 import { useCBTimelineStyles } from "./CBTimelineStyles";
 
 function CBTimeline(props: CBTimelineProps): JSX.Element {
   const styles = useCBTimelineStyles();
+  const theme = useTheme();
 
   return (
     <Timeline sx={styles.timeline}>
@@ -18,7 +20,11 @@ function CBTimeline(props: CBTimelineProps): JSX.Element {
             <TimelineDot sx={styles.dot} />
             {index !== array.length - 1 && <TimelineConnector />}
           </TimelineSeparator>
-          <TimelineContent sx={styles.content}>{bulletPoint}</TimelineContent>
+          <TimelineContent
+            sx={{ pb: index !== array.length - 1 ? theme.spacing(4) : 0 }}
+          >
+            {bulletPoint}
+          </TimelineContent>
         </TimelineItem>
       ))}
     </Timeline>

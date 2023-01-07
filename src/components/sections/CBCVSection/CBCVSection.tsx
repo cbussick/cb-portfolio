@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Card, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
 import { Section } from "../../../interfaces/Section";
@@ -38,19 +38,32 @@ function CBCVSection(): JSX.Element {
           This is an overview of my work experience, education and skillset.
         </Typography>
         <Box sx={{ marginTop: theme.spacing(6) }}>
-          <motion.div
-            style={{
-              marginTop: theme.spacing(4),
+          {/* Todo: Put these cards into a reusable component */}
+          <Card
+            sx={{
+              marginTop: theme.spacing(6),
+              borderRadius: 8,
+              padding: theme.spacing(7, 6),
+              marginBottom: theme.spacing(8),
             }}
-            {...getDefaultAnimationWithDelay(1.5)}
+            component={motion.div}
+            {...getDefaultAnimationWithDelay(1)}
           >
             <Typography variant="h2">Work experience</Typography>
             <CBTimeline bulletPoints={workExperienceBulletPoints} />
-          </motion.div>
-          <motion.div {...getDefaultAnimationWithDelay(1)}>
+          </Card>
+          <Card
+            sx={{
+              borderRadius: 8,
+              padding: theme.spacing(7, 6),
+              marginBottom: theme.spacing(8),
+            }}
+            component={motion.div}
+            {...getDefaultAnimationWithDelay(1.5)}
+          >
             <Typography variant="h2">Education</Typography>
             <CBTimeline bulletPoints={educationBulletPoints} />
-          </motion.div>
+          </Card>
           <motion.div
             style={{
               marginTop: theme.spacing(4),
