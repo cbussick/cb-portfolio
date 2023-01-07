@@ -1,15 +1,14 @@
-import { Typography, useTheme } from "@mui/material";
+import { Typography } from "@mui/material";
+import { cbGradient } from "../../helpers/cbGradient";
 import { CBTextGradientProps } from "./CBTextGradientInterfaces";
 
 function CBTextGradient(props: CBTextGradientProps): JSX.Element {
-  const theme = useTheme();
-
   return (
     <Typography
       {...props}
       component="em"
       sx={{
-        background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.primary.dark} 100%)`,
+        background: cbGradient,
         backgroundClip: "text",
         color: "transparent",
         fontStyle: "normal",

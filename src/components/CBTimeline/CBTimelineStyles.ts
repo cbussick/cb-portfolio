@@ -1,4 +1,5 @@
 import { timelineItemClasses } from "@mui/lab/TimelineItem";
+import { cbGradient } from "../../helpers/cbGradient";
 import { makeSx } from "../../helpers/makeSx";
 
 export const useCBTimelineStyles = () =>
@@ -15,4 +16,7 @@ export const useCBTimelineStyles = () =>
       backgroundColor: theme.palette.primary.main,
       borderWidth: 4,
     }),
+    connector: {
+      background: cbGradient,
+    },
   });

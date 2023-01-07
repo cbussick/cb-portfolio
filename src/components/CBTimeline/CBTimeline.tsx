@@ -18,7 +18,9 @@ function CBTimeline(props: CBTimelineProps): JSX.Element {
         <TimelineItem key={bulletPoint?.toString()}>
           <TimelineSeparator>
             <TimelineDot sx={styles.dot} />
-            {index !== array.length - 1 && <TimelineConnector />}
+            {index !== array.length - 1 && (
+              <TimelineConnector sx={styles.connector} />
+            )}
           </TimelineSeparator>
           <TimelineContent
             sx={{ pb: index !== array.length - 1 ? theme.spacing(5) : 0 }}
