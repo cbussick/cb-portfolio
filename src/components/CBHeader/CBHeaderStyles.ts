@@ -1,4 +1,5 @@
 import { SystemStyleObject } from "@mui/system";
+import { cbGradient } from "../../helpers/cbGradient";
 import { makeSx } from "../../helpers/makeSx";
 import { CBHeaderStylesProps } from "./CBHeaderInterfaces";
 
@@ -41,7 +42,7 @@ export const useCBHeaderStyles = (props: CBHeaderStylesProps) =>
       },
       ".link-label": {
         transition: "0.2s",
-        background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.primary.dark} 100%)`,
+        background: cbGradient,
         backgroundClip: "text",
       },
       "&& .MuiTouchRipple-child": {
@@ -56,7 +57,7 @@ export const useCBHeaderStyles = (props: CBHeaderStylesProps) =>
         ".link-label": {
           color: `${theme.palette.text.primary}00`,
           // Necessary here to override the theme link styling
-          background: `linear-gradient(45deg, ${theme.palette.primary.main} 30%, ${theme.palette.primary.dark} 100%)`,
+          background: cbGradient,
           backgroundClip: "text",
         },
       },

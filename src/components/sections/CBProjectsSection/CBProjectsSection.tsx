@@ -31,7 +31,7 @@ function CBProjectsSection(): JSX.Element {
         💡👷
         <br />
         Some <CBTextGradient variant="h1">Projects</CBTextGradient> I&apos;ve
-        worked on
+        Worked on
       </Typography>
 
       <Grid
