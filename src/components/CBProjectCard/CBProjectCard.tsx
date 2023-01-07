@@ -21,7 +21,7 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
   const styles = useCBProjectCardStyles();
 
   return (
-    <Card sx={styles.wrapper}>
+    <Card sx={styles.card}>
       <CardHeader
         title={<a href={project.url}>{project.name}</a>}
         titleTypographyProps={{
@@ -29,13 +29,15 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
           component: CBTextGradient,
           // Necessary because the `fontWeight` from the `CBTextGradient` is ignored here for whatever reason
           fontWeight: 600,
-          display: "inline",
+          display: "flex",
+          sx: styles.cardTitleTypography,
         }}
         subheader={<>Tech Stack: {project.techStack.join(", ")}</>}
-        subheaderTypographyProps={{ variant: "caption" }}
-        sx={{
-          pt: 0,
+        subheaderTypographyProps={{
+          variant: "caption",
+          sx: styles.cardSubHeaderTypography,
         }}
+        sx={styles.cardHeader}
       />
       <Divider sx={{ mb: theme.spacing(3) }} />
       {project.thumbnailType !== ProjectThumbnailType.None && (
@@ -68,7 +70,7 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
           width="100%"
         />
       )}
-      <CardContent>
+      <CardContent sx={styles.cardContent}>
         <Typography
           variant="body2"
           color="text.primary"
@@ -77,7 +79,7 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
           {project.description}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing sx={{ flexGrow: 1, alignItems: "flex-end" }}>
+      <CardActions disableSpacing sx={styles.cardActions}>
         {project.url && (
           <Button
             variant="contained"
