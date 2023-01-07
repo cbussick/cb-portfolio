@@ -1,4 +1,4 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
 import { Section } from "../../../interfaces/Section";
@@ -37,34 +37,21 @@ function CBCVSection(): JSX.Element {
         >
           This is an overview of my work experience, education and skillset.
         </Typography>
-        <Box sx={{ marginTop: theme.spacing(6) }}>
+        <Stack spacing={6} sx={{ marginTop: theme.spacing(6) }}>
           <motion.div {...getDefaultAnimationWithDelay(1)}>
             <CBCVCard
               title="Work experience"
               bulletPoints={workExperienceBulletPoints}
-              sx={{
-                marginTop: theme.spacing(6),
-                marginBottom: theme.spacing(8),
-              }}
             />
           </motion.div>
           <motion.div {...getDefaultAnimationWithDelay(1.5)}>
-            <CBCVCard
-              title="Education"
-              bulletPoints={educationBulletPoints}
-              sx={{ marginBottom: theme.spacing(8) }}
-            />
+            <CBCVCard title="Education" bulletPoints={educationBulletPoints} />
           </motion.div>
-          <motion.div
-            style={{
-              marginTop: theme.spacing(4),
-            }}
-            {...getDefaultAnimationWithDelay(2)}
-          >
+          <motion.div {...getDefaultAnimationWithDelay(2)}>
             <Typography variant="h2">Skillset</Typography>
             Todo: Add fitting format for skillset
           </motion.div>
-        </Box>
+        </Stack>
       </Box>
     </CBSectionContainer>
   );
