@@ -1,6 +1,6 @@
 import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
-import { getDefaultAnimationWithDelay } from "../../../helpers/getDefaultAnimationWithDelay";
+import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
 import CBCVCard from "../../CBCVCard/CBCVCard";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
@@ -22,37 +22,42 @@ function CBCVSection(): JSX.Element {
 
   return (
     <CBSectionContainer section={Section.CV}>
-      <Typography
-        variant="h1"
-        sx={{ textAlign: "center" }}
-        component={motion.div}
-        {...getDefaultAnimationWithDelay(0)}
-      >
-        <CBTextGradient variant="h1">CV</CBTextGradient>
-      </Typography>
-      <Box sx={{ display: "flex", flexDirection: "column" }}>
+      <motion.div {...getDefaultAnimation()}>
         <Typography
-          sx={{ textAlign: "justify" }}
+          variant="h1"
+          sx={{ textAlign: "center" }}
           component={motion.div}
-          {...getDefaultAnimationWithDelay(0.5)}
+          {...getDefaultAnimation()}
         >
-          This is an overview of my work experience, education and skillset.
+          <CBTextGradient variant="h1">CV</CBTextGradient>
         </Typography>
-        <Stack spacing={12} sx={{ marginTop: theme.spacing(10) }}>
-          <motion.div {...getDefaultAnimationWithDelay(1)}>
-            <CBCVCard
-              title="Work experience"
-              bulletPoints={workExperienceBulletPoints}
-            />
-          </motion.div>
-          <motion.div {...getDefaultAnimationWithDelay(1.5)}>
-            <CBCVCard title="Education" bulletPoints={educationBulletPoints} />
-          </motion.div>
-          <motion.div {...getDefaultAnimationWithDelay(2)}>
-            <CBSkillset />
-          </motion.div>
-        </Stack>
-      </Box>
+        <Box sx={{ display: "flex", flexDirection: "column" }}>
+          <Typography
+            sx={{ textAlign: "justify" }}
+            component={motion.div}
+            {...getDefaultAnimation()}
+          >
+            This is an overview of my work experience, education and skillset.
+          </Typography>
+          <Stack spacing={12} sx={{ marginTop: theme.spacing(10) }}>
+            <motion.div {...getDefaultAnimation()}>
+              <CBCVCard
+                title="Work experience"
+                bulletPoints={workExperienceBulletPoints}
+              />
+            </motion.div>
+            <motion.div {...getDefaultAnimation()}>
+              <CBCVCard
+                title="Education"
+                bulletPoints={educationBulletPoints}
+              />
+            </motion.div>
+            <motion.div {...getDefaultAnimation()}>
+              <CBSkillset />
+            </motion.div>
+          </Stack>
+        </Box>
+      </motion.div>
     </CBSectionContainer>
   );
 }
