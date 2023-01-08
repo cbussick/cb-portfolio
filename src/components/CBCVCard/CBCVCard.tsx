@@ -6,7 +6,6 @@ import {
   Theme,
   Typography,
 } from "@mui/material";
-import { motion } from "framer-motion";
 import { mergeSx } from "../../helpers/mergeSx";
 import CBTimeline from "../CBTimeline/CBTimeline";
 import { CBCVCardProps } from "./CBCVCardInterfaces";
@@ -17,7 +16,7 @@ function CBCVCard(props: CBCVCardProps): JSX.Element {
   const sxCard: SxProps<Theme> = mergeSx(props.sx, styles.card);
 
   return (
-    <Card sx={sxCard} component={motion.div}>
+    <Card sx={sxCard}>
       <CardHeader
         title={<Typography variant="h2">{props.title}</Typography>}
         sx={styles.cardHeader}
