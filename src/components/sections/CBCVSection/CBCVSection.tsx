@@ -2,7 +2,7 @@ import { Box, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
-import CBCVCard from "../../CBCVCard/CBCVCard";
+import CBCVTimelineCard from "../../CBCVTimelineCard/CBCVTimelineCard";
 import CBSectionContainer from "../../CBSectionContainer/CBSectionContainer";
 import CBSkillset from "../../CBSkillset/CBSkillset";
 import CBTextGradient from "../../CBTextGradient/CBTextGradient";
@@ -42,13 +42,16 @@ function CBCVSection(): JSX.Element {
         </Typography>
         <Stack spacing={12} sx={{ marginTop: theme.spacing(10) }}>
           <motion.div {...getDefaultAnimation()}>
-            <CBCVCard
+            <CBCVTimelineCard
               title="Work experience"
               bulletPoints={workExperienceBulletPoints}
             />
           </motion.div>
           <motion.div {...getDefaultAnimation()}>
-            <CBCVCard title="Education" bulletPoints={educationBulletPoints} />
+            <CBCVTimelineCard
+              title="Education"
+              bulletPoints={educationBulletPoints}
+            />
           </motion.div>
           <motion.div {...getDefaultAnimation()}>
             <CBSkillset />
