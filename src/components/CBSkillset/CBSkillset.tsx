@@ -1,4 +1,4 @@
-import { Card, Grid2Props, Link, Stack, Typography } from "@mui/material";
+import { Grid2Props, Link, Stack, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { ReactComponent as IllustratorLogo } from "../../resources/illustrator-logo.svg";
 import { ReactComponent as MetaQuestLogo } from "../../resources/meta-quest-logo.svg";
@@ -6,6 +6,8 @@ import { ReactComponent as PhotoshopLogo } from "../../resources/photoshop-logo.
 import { ReactComponent as ReactLogo } from "../../resources/react-logo.svg";
 import { ReactComponent as TypeScriptLogo } from "../../resources/typescript-logo.svg";
 import { ReactComponent as UELogo } from "../../resources/ue-logo.svg";
+import CBCVCard from "../CBCard/CBCVCard";
+import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { useCBSkillsetStyles } from "./CBSkillsetStyles";
 
 const gridItemProps: Grid2Props = {
@@ -21,10 +23,9 @@ function CBSkillset(): JSX.Element {
   const styles = useCBSkillsetStyles();
 
   return (
-    <Card sx={styles.card}>
+    <CBCVCard title={<CBTextGradient variant="h2">Skillset</CBTextGradient>}>
       <Stack spacing={6}>
-        <Typography variant="h2">Skillset</Typography>
-        <Typography>
+        <Typography sx={{ textAlign: "justify" }}>
           These are the technologies I am proficient with and which I{" "}
           <Link
             href="https://en.wikipedia.org/wiki/Law_of_the_instrument"
@@ -56,7 +57,7 @@ function CBSkillset(): JSX.Element {
           </Grid2>
         </Grid2>
       </Stack>
-    </Card>
+    </CBCVCard>
   );
 }
 

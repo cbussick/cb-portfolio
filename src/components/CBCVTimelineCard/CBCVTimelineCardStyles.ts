@@ -1,10 +1,7 @@
 import { makeSx } from "../../helpers/makeSx";
 
-export const useCBCVCardStyles = () =>
+export const useCBCVTimelineCardStyles = () =>
   makeSx({
-    card: (theme) => ({
-      p: theme.spacing(7, 6),
-    }),
     cardHeader: {
       p: 0,
     },

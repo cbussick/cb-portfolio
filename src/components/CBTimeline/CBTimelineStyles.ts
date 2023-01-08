@@ -9,6 +9,7 @@ export const useCBTimelineStyles = () =>
   makeSx({
     timeline: {
       p: 0,
+      mt: 0,
       mb: 0,
       [`& .${timelineItemClasses.root}:before`]: {
         flex: 0,
