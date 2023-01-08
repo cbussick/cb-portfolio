@@ -43,7 +43,7 @@ export const workExperienceData: CVBulletPointProps[] = [
   {
     title: "Westfälische Hochschule",
     caption: "VR Developer - Work Study",
-    startDate: "April 2021",
+    startDate: "August 2020",
     endDate: "March 2021",
   },
 ];
