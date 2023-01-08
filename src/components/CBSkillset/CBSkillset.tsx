@@ -38,22 +38,54 @@ function CBSkillset(): JSX.Element {
         </Typography>
         <Grid2 container spacing={12} sx={styles.grid}>
           <Grid2 {...gridItemProps}>
-            <ReactLogo />
+            <a href="https://reactjs.org/" target="_blank" rel="noreferrer">
+              <ReactLogo />
+            </a>
           </Grid2>
           <Grid2 {...gridItemProps}>
-            <TypeScriptLogo />
+            <a
+              href="https://www.typescriptlang.org/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <TypeScriptLogo />
+            </a>
           </Grid2>
           <Grid2 {...gridItemProps}>
-            <UELogo />
+            <a
+              href="https://www.unrealengine.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <UELogo />
+            </a>
           </Grid2>
           <Grid2 {...gridItemProps}>
-            <MetaQuestLogo />
+            <a
+              href="https://www.meta.com/quest/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <MetaQuestLogo />
+            </a>
           </Grid2>
           <Grid2 {...gridItemProps}>
-            <PhotoshopLogo />
+            <a
+              href="https://www.adobe.com/products/photoshop.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <PhotoshopLogo />
+            </a>
           </Grid2>
           <Grid2 {...gridItemProps}>
-            <IllustratorLogo />
+            <a
+              href="https://www.adobe.com/products/illustrator.html"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <IllustratorLogo />
+            </a>
           </Grid2>
         </Grid2>
       </Stack>
