@@ -13,7 +13,7 @@ export const useCBSectionContainerStyles = (
       flexDirection: "column",
       alignItems: "center",
       minHeight: "100vh",
-      paddingTop: theme.spacing(24),
-      paddingBottom: theme.spacing(14),
+      pt: { xs: theme.spacing(18), md: theme.spacing(30) },
+      pb: theme.spacing(14),
     }),
   });
