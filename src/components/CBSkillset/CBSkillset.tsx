@@ -1,4 +1,4 @@
-import { Card, Grid2Props, Stack, Typography } from "@mui/material";
+import { Card, Grid2Props, Link, Stack, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { ReactComponent as IllustratorLogo } from "../../resources/illustrator-logo.svg";
 import { ReactComponent as MetaQuestLogo } from "../../resources/meta-quest-logo.svg";
@@ -25,8 +25,15 @@ function CBSkillset(): JSX.Element {
       <Stack spacing={6}>
         <Typography variant="h2">Skillset</Typography>
         <Typography>
-          These are the technologies I am proficient with and which I usually
-          rely on when building projects.
+          These are the technologies I am proficient with and which I{" "}
+          <Link
+            href="https://en.wikipedia.org/wiki/Law_of_the_instrument"
+            target="_blank"
+          >
+            usually
+          </Link>{" "}
+          rely on when building projects. I am always interested in learning new
+          stuff 🚀
         </Typography>
         <Grid2 container spacing={12} sx={styles.grid}>
           <Grid2 {...gridItemProps}>
