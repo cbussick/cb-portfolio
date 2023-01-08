@@ -7,6 +7,7 @@ import { ReactComponent as ReactLogo } from "../../resources/react-logo.svg";
 import { ReactComponent as TypeScriptLogo } from "../../resources/typescript-logo.svg";
 import { ReactComponent as UELogo } from "../../resources/ue-logo.svg";
 import CBCVCard from "../CBCard/CBCVCard";
+import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { useCBSkillsetStyles } from "./CBSkillsetStyles";
 
 const gridItemProps: Grid2Props = {
@@ -22,9 +23,8 @@ function CBSkillset(): JSX.Element {
   const styles = useCBSkillsetStyles();
 
   return (
-    <CBCVCard>
+    <CBCVCard title={<CBTextGradient variant="h2">Skillset</CBTextGradient>}>
       <Stack spacing={6}>
-        <Typography variant="h2">Skillset</Typography>
         <Typography sx={{ textAlign: "justify" }}>
           These are the technologies I am proficient with and which I{" "}
           <Link
