@@ -24,7 +24,7 @@ function CBSkillset(): JSX.Element {
     <Card sx={styles.card}>
       <Stack spacing={6}>
         <Typography variant="h2">Skillset</Typography>
-        <Typography>
+        <Typography sx={{ textAlign: "justify" }}>
           These are the technologies I am proficient with and which I{" "}
           <Link
             href="https://en.wikipedia.org/wiki/Law_of_the_instrument"
