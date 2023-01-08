@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b262ce9d.css",
-    "main.js": "/static/js/main.d0fca74b.js",
+    "main.js": "/static/js/main.0e42a669.js",
     "static/media/vr-office-exercises-farm.png": "/static/media/vr-office-exercises-farm.6dad3aea97689618093b.png",
     "static/media/portfolio-website.png": "/static/media/portfolio-website.df4f385f47f203679932.png",
     "static/media/me-and-bruno.jpg": "/static/media/me-and-bruno.8164df22a1c67e6323c3.jpg",
@@ -19,10 +19,10 @@
     "index.html": "/index.html",
     "static/media/react-logo.svg": "/static/media/react-logo.928f956d9c8ebcffb98a8e917154a81a.svg",
     "main.b262ce9d.css.map": "/static/css/main.b262ce9d.css.map",
-    "main.d0fca74b.js.map": "/static/js/main.d0fca74b.js.map"
+    "main.0e42a669.js.map": "/static/js/main.0e42a669.js.map"
   },
   "entrypoints": [
     "static/css/main.b262ce9d.css",
-    "static/js/main.d0fca74b.js"
+    "static/js/main.0e42a669.js"
   ]
 }
