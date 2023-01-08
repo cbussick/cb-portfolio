@@ -49,6 +49,9 @@ function CBHomeSection(): JSX.Element {
         in Gel&shy;sen&shy;kir&shy;chen, Ger&shy;many 🇩🇪. Be&shy;sides all
         things related to com&shy;pu&shy;ter science I also enjoy sports, music
         pro&shy;duc&shy;tion, man&shy;ga and ani&shy;me.
+        <br />
+        To learn more about me, you can scroll down or use the links at the top
+        of the page.
       </Typography>
       <motion.figure
         style={{
