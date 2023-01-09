@@ -15,8 +15,8 @@ function App(): JSX.Element {
         <CBHeader />
         <Container maxWidth={false} component="main" disableGutters>
           <CBHomeSection />
-          <CBCVSection />
           <CBProjectsSection />
+          <CBCVSection />
           <CBContactSection />
         </Container>
       </Container>
