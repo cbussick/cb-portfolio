@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
@@ -20,40 +20,38 @@ function CBCVSection(): JSX.Element {
 
   return (
     <CBSectionContainer section={Section.CV}>
-      <Stack spacing={10}>
-        <Typography
-          variant="h1"
-          sx={{ textAlign: "center" }}
-          component={motion.div}
-          {...getDefaultAnimation()}
-        >
-          <CBTextGradient variant="h1">CV</CBTextGradient>
-        </Typography>
-        <Typography
-          sx={{
-            textAlign: "justify",
-          }}
-          component={motion.div}
-          {...getDefaultAnimation()}
-        >
-          This is an overview of my work experience, education and skillset.
-        </Typography>
-        <motion.div {...getDefaultAnimation()}>
-          <CBCVTimelineCard
-            title="Work experience"
-            bulletPoints={workExperienceBulletPoints}
-          />
-        </motion.div>
-        <motion.div {...getDefaultAnimation()}>
-          <CBCVTimelineCard
-            title="Education"
-            bulletPoints={educationBulletPoints}
-          />
-        </motion.div>
-        <motion.div {...getDefaultAnimation()}>
-          <CBSkillset />
-        </motion.div>
-      </Stack>
+      <Typography
+        variant="h1"
+        sx={{ textAlign: "center" }}
+        component={motion.div}
+        {...getDefaultAnimation()}
+      >
+        <CBTextGradient variant="h1">CV</CBTextGradient>
+      </Typography>
+      <Typography
+        sx={{
+          textAlign: "justify",
+        }}
+        component={motion.div}
+        {...getDefaultAnimation()}
+      >
+        This is an overview of my work experience, education and skillset.
+      </Typography>
+      <motion.div {...getDefaultAnimation()}>
+        <CBCVTimelineCard
+          title="Work experience"
+          bulletPoints={workExperienceBulletPoints}
+        />
+      </motion.div>
+      <motion.div {...getDefaultAnimation()}>
+        <CBCVTimelineCard
+          title="Education"
+          bulletPoints={educationBulletPoints}
+        />
+      </motion.div>
+      <motion.div {...getDefaultAnimation()}>
+        <CBSkillset />
+      </motion.div>
     </CBSectionContainer>
   );
 }

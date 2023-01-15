@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
@@ -16,19 +16,17 @@ function CBProjectsSection(): JSX.Element {
 
   return (
     <CBSectionContainer section={Section.Projects}>
-      <Stack spacing={10}>
-        <Typography
-          variant="h1"
-          sx={{ textAlign: "center" }}
-          component={motion.div}
-          {...getDefaultAnimation()}
-        >
-          Some <CBTextGradient variant="h1">Projects</CBTextGradient> I&apos;ve
-          Worked on
-        </Typography>
+      <Typography
+        variant="h1"
+        sx={{ textAlign: "center" }}
+        component={motion.div}
+        {...getDefaultAnimation()}
+      >
+        Some <CBTextGradient variant="h1">Projects</CBTextGradient> I&apos;ve
+        Worked on
+      </Typography>
 
-        <Stack spacing={9}>{projectCards}</Stack>
-      </Stack>
+      {projectCards}
     </CBSectionContainer>
   );
 }

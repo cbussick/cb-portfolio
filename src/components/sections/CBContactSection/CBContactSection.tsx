@@ -1,4 +1,4 @@
-import { Link, Stack, Typography } from "@mui/material";
+import { Link, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { cbContactInformation } from "../../../data/cbContactInformation";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
@@ -11,30 +11,28 @@ function CBContactSection(): JSX.Element {
 
   return (
     <CBSectionContainer section={Section.Contact}>
-      <Stack spacing={10}>
-        <Typography
-          variant="h1"
-          sx={{ textAlign: "center" }}
-          component={motion.div}
-          {...getDefaultAnimation()}
-        >
-          <CBTextGradient variant="h1">Reach out</CBTextGradient> to me!
-        </Typography>
-        <Typography component={motion.div} {...getDefaultAnimation(0.3)}>
-          If you have any questions or want to talk about something, just send
-          me a message :)
-        </Typography>
-        <Typography
-          component={motion.div}
-          {...getDefaultAnimation(0.6)}
-          alignSelf="center"
-        >
-          You can contact me at:
-          <address>
-            <Link href={`mailto:${eMail}`}>{eMail}</Link>
-          </address>
-        </Typography>
-      </Stack>
+      <Typography
+        variant="h1"
+        sx={{ textAlign: "center" }}
+        component={motion.div}
+        {...getDefaultAnimation()}
+      >
+        <CBTextGradient variant="h1">Reach out</CBTextGradient> to me!
+      </Typography>
+      <Typography component={motion.div} {...getDefaultAnimation(0.3)}>
+        If you have any questions or want to talk about something, just send me
+        a message :)
+      </Typography>
+      <Typography
+        component={motion.div}
+        {...getDefaultAnimation(0.6)}
+        alignSelf="center"
+      >
+        You can contact me at:
+        <address>
+          <Link href={`mailto:${eMail}`}>{eMail}</Link>
+        </address>
+      </Typography>
     </CBSectionContainer>
   );
 }
