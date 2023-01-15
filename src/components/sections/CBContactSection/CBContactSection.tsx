@@ -17,8 +17,6 @@ function CBContactSection(): JSX.Element {
         component={motion.div}
         {...getDefaultAnimation(0)}
       >
-        👋
-        <br />
         <CBTextGradient variant="h1">Reach out</CBTextGradient> to me!
       </Typography>
       <Stack spacing={6} alignItems="center">
