@@ -18,7 +18,7 @@ function CBHomeSection(): JSX.Element {
         variant="h1"
         sx={{ textAlign: "center" }}
         component={motion.div}
-        {...getDefaultAnimation(0)}
+        {...getDefaultAnimation()}
       >
         <CBTextGradient variant="h1">Welcome!</CBTextGradient>
       </Typography>
