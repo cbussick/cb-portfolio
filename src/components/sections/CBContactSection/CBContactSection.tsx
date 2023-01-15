@@ -23,7 +23,6 @@ function CBContactSection(): JSX.Element {
         <Typography component={motion.div} {...getDefaultAnimation(0.3)}>
           If you have any questions or want to talk about something, just send
           me a message :)
-          <br />
         </Typography>
         <Typography component={motion.div} {...getDefaultAnimation(0.6)}>
           You can contact me at:
