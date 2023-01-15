@@ -80,6 +80,9 @@ const themeWithOverrides: Theme = {
           borderRadius: 32,
           padding: theme.spacing(7, 6),
           boxShadow: theme.shadows[10],
+          [theme.breakpoints.down("md")]: {
+            padding: theme.spacing(4, 3),
+          },
         },
       },
     },

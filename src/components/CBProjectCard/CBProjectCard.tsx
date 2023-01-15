@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardMedia,
   Divider,
+  Stack,
   Typography,
 } from "@mui/material";
 import ReactPlayer from "react-player";
@@ -98,7 +99,11 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
     </>
   );
 
-  return <Card sx={styles.card}>{headerAndContentAndActions}</Card>;
+  return (
+    <Card sx={styles.card} component={Stack} spacing={5}>
+      {headerAndContentAndActions}
+    </Card>
+  );
 }
 
 export default CBProjectCard;
