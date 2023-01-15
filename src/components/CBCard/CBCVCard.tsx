@@ -1,4 +1,4 @@
-import { Card, CardHeader } from "@mui/material";
+import { Card, CardHeader, Stack } from "@mui/material";
 import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { CBCVCardProps } from "./CBCVCardInterfaces";
 import { useCBCVCardStyles } from "./CBCVCardStyles";
@@ -10,7 +10,7 @@ function CBCVCard(props: CBCVCardProps): JSX.Element {
   const styles = useCBCVCardStyles();
 
   return (
-    <Card sx={styles.card}>
+    <Card component={Stack} spacing={5}>
       <CardHeader
         title={<CBTextGradient variant="h2">{props.title}</CBTextGradient>}
         sx={styles.cardHeader}
