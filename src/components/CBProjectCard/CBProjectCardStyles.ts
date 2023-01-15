@@ -11,15 +11,21 @@ export const useCBProjectCardStyles = () =>
       display: "flex",
       flexDirection: "column",
     }),
-    cardHeader: { pt: 0, px: 0 },
-    cardSubHeaderTypography: (theme) => ({
+    cardHeader: (theme) => ({
       pt: 0,
       px: theme.spacing(cardPadding),
+      "& .MuiCardHeader-content": {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+      },
     }),
-    cardTitleTypography: (theme) => ({
+    cardSubHeaderTypography: {
       pt: 0,
-      px: theme.spacing(cardPadding),
-    }),
+    },
+    cardTitleTypography: {
+      pt: 0,
+    },
     cardContent: (theme) => ({
       px: theme.spacing(cardPadding),
     }),
