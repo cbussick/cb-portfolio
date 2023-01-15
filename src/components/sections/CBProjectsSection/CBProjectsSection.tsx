@@ -9,12 +9,7 @@ import { projects } from "./projectsData";
 
 function CBProjectsSection(): JSX.Element {
   const projectCards = projects.map((project) => (
-    <Box
-      key={project.id}
-      sx={{ display: "flex" }}
-      component={motion.div}
-      {...getDefaultAnimation()}
-    >
+    <Box key={project.id} component={motion.div} {...getDefaultAnimation()}>
       <CBProjectCard project={project} />
     </Box>
   ));
