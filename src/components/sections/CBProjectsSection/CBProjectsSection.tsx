@@ -22,8 +22,6 @@ function CBProjectsSection(): JSX.Element {
         component={motion.div}
         {...getDefaultAnimation()}
       >
-        💡👷
-        <br />
         Some <CBTextGradient variant="h1">Projects</CBTextGradient> I&apos;ve
         Worked on
       </Typography>
