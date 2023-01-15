@@ -1,4 +1,4 @@
-import { Construction, Contacts, Home, School } from "@mui/icons-material/";
+import { Construction, Email, Home, School } from "@mui/icons-material/";
 import { HeaderLink } from "../../interfaces/HeaderLink";
 import { Section } from "../../interfaces/Section";
 
@@ -15,7 +15,7 @@ export const headerLinks: HeaderLink[] = [
     id: "contact-me",
     label: "Contact me",
     section: Section.Contact,
-    icon: Contacts,
+    icon: Email,
   },
 ];
 

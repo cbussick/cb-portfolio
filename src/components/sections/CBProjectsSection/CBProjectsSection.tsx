@@ -1,4 +1,4 @@
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
@@ -26,7 +26,7 @@ function CBProjectsSection(): JSX.Element {
         Worked on
       </Typography>
 
-      <Stack spacing={9}>{projectCards}</Stack>
+      {projectCards}
     </CBSectionContainer>
   );
 }

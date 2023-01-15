@@ -1,4 +1,4 @@
-import { Link, Typography, useTheme } from "@mui/material";
+import { Link, Stack, Typography, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import { cbContactInformation } from "../../../data/cbContactInformation";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
@@ -18,7 +18,7 @@ function CBHomeSection(): JSX.Element {
         variant="h1"
         sx={{ textAlign: "center" }}
         component={motion.div}
-        {...getDefaultAnimation(0)}
+        {...getDefaultAnimation()}
       >
         <CBTextGradient variant="h1">Welcome!</CBTextGradient>
       </Typography>
@@ -53,15 +53,10 @@ function CBHomeSection(): JSX.Element {
         To learn more about me, you can scroll down or use the links at the top
         of the page.
       </Typography>
-      <motion.figure
-        style={{
-          padding: 0,
-          margin: 0,
-          marginTop: theme.spacing(7),
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+      <Stack
+        spacing={2}
+        alignSelf="center"
+        component={motion.figure}
         {...getDefaultAnimation(0.6)}
       >
         <img
@@ -73,10 +68,10 @@ function CBHomeSection(): JSX.Element {
             boxShadow: theme.shadows[10],
           }}
         />
-        <figcaption style={{ textAlign: "start" }}>
-          <Typography variant="caption">Me and Bruno :)</Typography>
-        </figcaption>
-      </motion.figure>
+        <Typography variant="caption" component="figcaption">
+          Me and Bruno :)
+        </Typography>
+      </Stack>
     </CBSectionContainer>
   );
 }

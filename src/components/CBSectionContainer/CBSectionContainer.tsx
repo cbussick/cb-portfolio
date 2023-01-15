@@ -1,4 +1,4 @@
-import { Container } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 import { getHeaderLinkForSection } from "../CBHeader/headerLinkData";
 import { CBSectionContainerProps } from "./CBSectionContainerInterfaces";
 import { useCBSectionContainerStyles } from "./CBSectionContainerStyles";
@@ -16,7 +16,7 @@ function CBSectionContainer(props: CBSectionContainerProps): JSX.Element {
         // when the returned `sectionId` is an empty string ("")
         id={sectionId || undefined}
       >
-        {props.children}
+        <Stack spacing={{ xs: 5, md: 10 }}>{props.children}</Stack>
       </Container>
     </Container>
   );

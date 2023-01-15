@@ -27,7 +27,7 @@ export const useCBSectionContainerStyles = (props: CBSectionContainerProps) =>
       alignItems: "center",
       minHeight: "100vh",
       pt: { xs: theme.spacing(18), md: theme.spacing(30) },
-      pb: theme.spacing(14),
+      pb: { xs: theme.spacing(7), md: theme.spacing(14) },
       ...getSectionStylesMap(theme)[props.section],
     }),
   });
