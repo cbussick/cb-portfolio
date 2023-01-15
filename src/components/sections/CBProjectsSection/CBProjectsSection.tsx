@@ -16,17 +16,19 @@ function CBProjectsSection(): JSX.Element {
 
   return (
     <CBSectionContainer section={Section.Projects}>
-      <Typography
-        variant="h1"
-        sx={{ textAlign: "center" }}
-        component={motion.div}
-        {...getDefaultAnimation()}
-      >
-        Some <CBTextGradient variant="h1">Projects</CBTextGradient> I&apos;ve
-        Worked on
-      </Typography>
+      <Stack spacing={10}>
+        <Typography
+          variant="h1"
+          sx={{ textAlign: "center" }}
+          component={motion.div}
+          {...getDefaultAnimation()}
+        >
+          Some <CBTextGradient variant="h1">Projects</CBTextGradient> I&apos;ve
+          Worked on
+        </Typography>
 
-      <Stack spacing={9}>{projectCards}</Stack>
+        <Stack spacing={9}>{projectCards}</Stack>
+      </Stack>
     </CBSectionContainer>
   );
 }
