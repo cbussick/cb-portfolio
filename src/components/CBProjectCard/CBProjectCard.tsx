@@ -11,7 +11,6 @@ import {
 } from "@mui/material";
 import ReactPlayer from "react-player";
 import { ProjectThumbnailType } from "../../interfaces/Project";
-import theme from "../../theme/theme";
 import CBTextGradient from "../CBTextGradient/CBTextGradient";
 import { CBProjectCardProps } from "./CBProjectCardInterfaces";
 import { useCBProjectCardStyles } from "./CBProjectCardStyles";
@@ -20,8 +19,37 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
   const { project } = props;
   const styles = useCBProjectCardStyles();
 
-  return (
-    <Card sx={styles.card}>
+  const cardMedia = project.thumbnailType !== ProjectThumbnailType.None && (
+    <CardMedia
+      component={
+        project.thumbnailType === ProjectThumbnailType.Image
+          ? "img"
+          : ReactPlayer
+      }
+      image={
+        project.thumbnailType === ProjectThumbnailType.Image
+          ? project.thumbnail
+          : undefined
+      }
+      alt={
+        project.thumbnailType === ProjectThumbnailType.Image
+          ? project.name
+          : undefined
+      }
+      url={
+        project.thumbnailType === ProjectThumbnailType.Video
+          ? project.url
+          : undefined
+      }
+      controls={
+        project.thumbnailType === ProjectThumbnailType.Video ? true : undefined
+      }
+      sx={styles.cardMedia}
+    />
+  );
+
+  const headerAndContentAndActions: JSX.Element = (
+    <>
       <CardHeader
         title={<a href={project.url}>{project.name}</a>}
         titleTypographyProps={{
@@ -39,37 +67,8 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
         }}
         sx={styles.cardHeader}
       />
-      <Divider sx={{ mb: theme.spacing(3) }} />
-      {project.thumbnailType !== ProjectThumbnailType.None && (
-        <CardMedia
-          component={
-            project.thumbnailType === ProjectThumbnailType.Image
-              ? "img"
-              : ReactPlayer
-          }
-          image={
-            project.thumbnailType === ProjectThumbnailType.Image
-              ? project.thumbnail
-              : undefined
-          }
-          alt={
-            project.thumbnailType === ProjectThumbnailType.Image
-              ? project.name
-              : undefined
-          }
-          url={
-            project.thumbnailType === ProjectThumbnailType.Video
-              ? project.url
-              : undefined
-          }
-          controls={
-            project.thumbnailType === ProjectThumbnailType.Video
-              ? true
-              : undefined
-          }
-          width="100%"
-        />
-      )}
+      <Divider sx={styles.divider} />
+      {cardMedia}
       <CardContent sx={styles.cardContent}>
         <Typography
           variant="body2"
@@ -92,8 +91,10 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
           </Button>
         )}
       </CardActions>
-    </Card>
+    </>
   );
+
+  return <Card sx={styles.card}>{headerAndContentAndActions}</Card>;
 }
 
 export default CBProjectCard;

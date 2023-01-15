@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import { getDefaultAnimation } from "../../../helpers/getDefaultAnimation";
 import { Section } from "../../../interfaces/Section";
@@ -9,15 +9,9 @@ import { projects } from "./projectsData";
 
 function CBProjectsSection(): JSX.Element {
   const projectCards = projects.map((project) => (
-    <Grid
-      item
-      key={project.id}
-      sx={{ display: "flex" }}
-      component={motion.div}
-      {...getDefaultAnimation()}
-    >
+    <Box key={project.id} component={motion.div} {...getDefaultAnimation()}>
       <CBProjectCard project={project} />
-    </Grid>
+    </Box>
   ));
 
   return (
@@ -34,13 +28,7 @@ function CBProjectsSection(): JSX.Element {
         Worked on
       </Typography>
 
-      <Grid
-        container
-        spacing={9}
-        sx={{ display: "flex", justifyContent: "center" }}
-      >
-        {projectCards}
-      </Grid>
+      <Stack spacing={9}>{projectCards}</Stack>
     </CBSectionContainer>
   );
 }
