@@ -1,4 +1,4 @@
-import { CSSProperties } from "react";
+import { CSSProperties } from "@mui/material/styles/createTypography";
 
 export enum BorderSide {
   Top = "top",
