@@ -1,9 +1,22 @@
+import { Theme } from "@mui/material";
+import { CSSProperties } from "@mui/material/styles/createTypography";
 import { makeSx } from "../../helpers/makeSx";
-import { CBSectionContainerStylesProps } from "./CBSectionContainerInterfaces";
+import { Section } from "../../interfaces/Section";
+import { CBSectionContainerProps } from "./CBSectionContainerInterfaces";
 
-export const useCBSectionContainerStyles = (
-  props: CBSectionContainerStylesProps
-) =>
+/**
+ * A map containing CSS properties which should only be applied to a specific section.
+ *
+ * @returns a map of CSS properties specific for each section.
+ */
+const getSectionStylesMap = (theme: Theme): Record<Section, CSSProperties> => ({
+  [Section.Home]: { pt: { xs: theme.spacing(14), md: theme.spacing(20) } },
+  [Section.Projects]: {},
+  [Section.CV]: {},
+  [Section.Contact]: {},
+});
+
+export const useCBSectionContainerStyles = (props: CBSectionContainerProps) =>
   makeSx({
     outerContainer: {
       background: props.background,
@@ -15,5 +28,6 @@ export const useCBSectionContainerStyles = (
       minHeight: "100vh",
       pt: { xs: theme.spacing(18), md: theme.spacing(30) },
       pb: theme.spacing(14),
+      ...getSectionStylesMap(theme)[props.section],
     }),
   });

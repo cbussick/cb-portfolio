@@ -5,7 +5,3 @@ export interface CBSectionContainerProps extends ContainerProps {
   section: Section;
   background?: string;
 }
-export type CBSectionContainerStylesProps = Pick<
-  CBSectionContainerProps,
-  "background"
->;
