@@ -51,7 +51,11 @@ function CBProjectCard(props: CBProjectCardProps): JSX.Element {
   const headerAndContentAndActions: JSX.Element = (
     <>
       <CardHeader
-        title={<a href={project.url}>{project.name}</a>}
+        title={
+          <a href={project.url} target="_blank" rel="noreferrer">
+            {project.name}
+          </a>
+        }
         titleTypographyProps={{
           variant: "h3",
           component: CBTextGradient,
