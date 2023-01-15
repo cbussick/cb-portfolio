@@ -16,7 +16,7 @@ function CBSectionContainer(props: CBSectionContainerProps): JSX.Element {
         // when the returned `sectionId` is an empty string ("")
         id={sectionId || undefined}
       >
-        <Stack spacing={10}>{props.children}</Stack>
+        <Stack spacing={{ xs: 5, md: 10 }}>{props.children}</Stack>
       </Container>
     </Container>
   );
